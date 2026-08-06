@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence matrix example</title>
+  <desc id="desc">A synthetic executive slide proving four capabilities with metrics and evidence cards.</desc>
+  <style>
+    .t{font-family:Arial,"Noto Sans CJK SC",sans-serif;fill:#172331}.navy{fill:#0B1F33}.orange{fill:#EB7625}.blue{fill:#245A88}.green{fill:#168A7A}.purple{fill:#6E4BD8}.gray{fill:#5E6A75}.faint{fill:#87939F}.white{fill:#fff}.b{font-weight:700}.s{font-size:18px}.m{font-size:24px}.l{font-size:34px}.xl{font-size:48px}.card{fill:#fff;stroke:#CDD4DB;stroke-width:2}.rule{stroke:#CDD4DB;stroke-width:2}
+  </style>
+  <rect width="1600" height="900" fill="#fff"/>
+  <text class="t orange b s" x="78" y="54">03 / ROLE FIT AND EVIDENCE</text>
+  <text class="t navy b" x="78" y="122" font-size="42px">Four required capabilities are proven with operating evidence</text>
+  <line x1="78" y1="158" x2="1522" y2="158" class="rule"/>
+  <line x1="78" y1="158" x2="250" y2="158" stroke="#EB7625" stroke-width="5"/>
+  <text class="t gray m" x="78" y="198">Illustrative data · claims are supported by scope, delivery proof, and measurable value</text>
+
+  <g>
+    <rect x="78" y="230" width="270" height="72" fill="#F3F5F7"/>
+    <rect x="370" y="230" width="270" height="72" fill="#F3F5F7"/>
+    <rect x="662" y="230" width="270" height="72" fill="#FAEBDD"/>
+    <rect x="954" y="230" width="270" height="72" fill="#FAEBDD"/>
+    <rect x="1246" y="230" width="276" height="72" fill="#F3F5F7"/>
+    <text class="t navy b m" x="100" y="260">6 functions</text><text class="t gray s" x="100" y="286">cross-functional scope</text>
+    <text class="t navy b m" x="392" y="260">18 initiatives</text><text class="t gray s" x="392" y="286">assessed or delivered</text>
+    <text class="t orange b m" x="684" y="260">950 h / month</text><text class="t gray s" x="684" y="286">validated efficiency</text>
+    <text class="t orange b m" x="976" y="260">$120k / year</text><text class="t gray s" x="976" y="286">risk reduction</text>
+    <text class="t navy b m" x="1268" y="260">4-person team</text><text class="t gray s" x="1268" y="286">parallel delivery</text>
+  </g>
+
+  <g transform="translate(78 334)">
+    <rect class="card" width="698" height="210"/><rect width="10" height="210" fill="#245A88"/>
+    <text class="t blue b s" x="32" y="36">01</text><text class="t navy b l" x="82" y="42">Strategy and delivery</text>
+    <line x1="32" y1="62" x2="666" y2="62" class="rule"/>
+    <text class="t faint b s" x="32" y="94">REQUIREMENT</text><text class="t gray s" x="210" y="94">Prioritize, design, deliver, and evaluate initiatives</text>
+    <text class="t blue b s" x="32" y="134">DIRECT EVIDENCE</text><text class="t s" x="232" y="134">Created a repeatable demand-to-value delivery path</text>
+    <rect x="232" y="158" width="434" height="28" fill="#EAF2FB"/><text class="t blue b" x="250" y="179" font-size="16px">18 initiatives | 950 h/month | 6 functions</text>
+  </g>
+  <g transform="translate(824 334)">
+    <rect class="card" width="698" height="210"/><rect width="10" height="210" fill="#168A7A"/>
+    <text class="t green b s" x="32" y="36">02</text><text class="t navy b l" x="82" y="42">Platform and governance</text>
+    <line x1="32" y1="62" x2="666" y2="62" class="rule"/>
+    <text class="t faint b s" x="32" y="94">REQUIREMENT</text><text class="t gray s" x="210" y="94">Set architecture, access, operations, and controls</text>
+    <text class="t green b s" x="32" y="134">DIRECT EVIDENCE</text><text class="t s" x="232" y="134">Defined selection, operating, and security standards</text>
+    <rect x="232" y="158" width="434" height="28" fill="#E8F5F1"/><text class="t green b" x="250" y="179" font-size="16px">Architecture | access | operating standards</text>
+  </g>
+  <g transform="translate(78 566)">
+    <rect class="card" width="698" height="210"/><rect width="10" height="210" fill="#6E4BD8"/>
+    <text class="t purple b s" x="32" y="36">03</text><text class="t navy b l" x="82" y="42">Cross-functional adoption</text>
+    <line x1="32" y1="62" x2="666" y2="62" class="rule"/>
+    <text class="t faint b s" x="32" y="94">REQUIREMENT</text><text class="t gray s" x="210" y="94">Align demand, delivery, acceptance, and feedback</text>
+    <text class="t purple b s" x="32" y="134">DIRECT EVIDENCE</text><text class="t s" x="232" y="134">Established owners and review cadence across functions</text>
+    <rect x="232" y="158" width="434" height="28" fill="#F0ECFB"/><text class="t purple b" x="250" y="179" font-size="16px">6 functions | shared gates | feedback loop</text>
+  </g>
+  <g transform="translate(824 566)">
+    <rect class="card" width="698" height="210"/><rect width="10" height="210" fill="#EB7625"/>
+    <text class="t orange b s" x="32" y="36">04</text><text class="t navy b l" x="82" y="42">Team and capability</text>
+    <line x1="32" y1="62" x2="666" y2="62" class="rule"/>
+    <text class="t faint b s" x="32" y="94">REQUIREMENT</text><text class="t gray s" x="210" y="94">Build ownership, depth, and parallel delivery capacity</text>
+    <text class="t orange b s" x="32" y="134">DIRECT EVIDENCE</text><text class="t s" x="232" y="134">Built a four-person team with clear domain ownership</text>
+    <rect x="232" y="158" width="434" height="28" fill="#FAEBDD"/><text class="t orange b" x="250" y="179" font-size="16px">4 people | domain ownership | parallel delivery</text>
+  </g>
+
+  <rect x="78" y="810" width="1444" height="58" class="navy"/>
+  <text class="white b m" x="800" y="847" text-anchor="middle" font-family="Arial,Noto Sans CJK SC,sans-serif">Management conclusion: evidence supports immediate transition into the target responsibility</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Operating model loop example</title>
+  <desc id="desc">A synthetic executive slide showing a six-role delivery and feedback loop.</desc>
+  <style>
+    .t{font-family:Arial,"Noto Sans CJK SC",sans-serif;fill:#172331}.navy{fill:#0B1F33}.orange{fill:#EB7625}.blue{fill:#245A88}.green{fill:#168A7A}.purple{fill:#6E4BD8}.gray{fill:#5E6A75}.faint{fill:#87939F}.white{fill:#fff}.b{font-weight:700}.s{font-size:18px}.m{font-size:24px}.l{font-size:34px}.xl{font-size:47px}.card{fill:#fff;stroke:#CDD4DB;stroke-width:2}.rule{stroke:#CDD4DB;stroke-width:2}
+  </style>
+  <rect width="1600" height="900" fill="#fff"/>
+  <text class="t orange b s" x="78" y="54">04 / OPERATING MODEL</text>
+  <text class="t navy b" x="78" y="122" font-size="42px">Six roles create an end-to-end operating and delivery loop</text>
+  <line x1="78" y1="158" x2="1522" y2="158" class="rule"/>
+  <line x1="78" y1="158" x2="250" y2="158" stroke="#EB7625" stroke-width="5"/>
+  <text class="t gray m" x="78" y="198">Illustrative model · business context, knowledge, architecture, delivery, and operations remain connected</text>
+
+  <g>
+    <rect x="78" y="226" width="338" height="66" fill="#F3F5F7"/>
+    <rect x="446" y="226" width="338" height="66" fill="#E8F5F1"/>
+    <rect x="814" y="226" width="338" height="66" fill="#EAF2FB"/>
+    <rect x="1182" y="226" width="340" height="66" fill="#FAEBDD"/>
+    <text class="t navy b s" x="100" y="253">CURRENT BASE</text><text class="t b" x="100" y="279" font-size="20px">Delivery team + automation</text>
+    <text class="t green b s" x="468" y="253">ADD INTERNALLY</text><text class="t b" x="468" y="279" font-size="20px">Data + evaluation capability</text>
+    <text class="t blue b s" x="836" y="253">DEVELOP INTERNALLY</text><text class="t b" x="836" y="279" font-size="20px">One solution architect</text>
+    <text class="t orange b s" x="1204" y="253">BUILD IN THE BUSINESS</text><text class="t b" x="1204" y="279" font-size="20px">Champions + domain curators</text>
+  </g>
+
+  <rect x="78" y="324" width="460" height="390" fill="#FAEBDD"/>
+  <rect x="560" y="324" width="962" height="390" fill="#EAF2FB"/>
+  <text class="t orange b m" x="100" y="358">BUSINESS NETWORK</text>
+  <text class="t blue b m" x="582" y="358">INTERNAL CORE TEAM</text>
+
+  <g transform="translate(100 390)">
+    <rect class="card" width="194" height="232"/><rect width="194" height="10" fill="#EB7625"/>
+    <text class="t orange b s" x="18" y="46">BUSINESS ROLE</text><text class="t navy b m" x="18" y="88">Business</text><text class="t navy b m" x="18" y="116">champion</text>
+    <line x1="18" y1="136" x2="176" y2="136" class="rule"/>
+    <text class="t gray s" x="18" y="166">Frame the problem</text><text class="t gray s" x="18" y="193">Test the solution</text><text class="t gray s" x="18" y="220">Confirm value</text>
+  </g>
+  <text class="t orange b l" x="314" y="516">→</text>
+  <g transform="translate(344 390)">
+    <rect class="card" width="172" height="232"/><rect width="172" height="10" fill="#EB7625"/>
+    <text class="t orange b s" x="16" y="46">BUSINESS ROLE</text><text class="t navy b m" x="16" y="88">Domain</text><text class="t navy b m" x="16" y="116">curator</text>
+    <line x1="16" y1="136" x2="156" y2="136" class="rule"/>
+    <text class="t gray s" x="16" y="166">Own sources</text><text class="t gray s" x="16" y="193">Maintain rules</text><text class="t gray s" x="16" y="220">Approve accuracy</text>
+  </g>
+  <text class="t orange b l" x="530" y="516">→</text>
+  <g transform="translate(582 390)">
+    <rect class="card" width="206" height="232"/><rect width="206" height="10" fill="#168A7A"/>
+    <text class="t green b s" x="18" y="46">NEW CAPABILITY</text><text class="t navy b m" x="18" y="88">Data and</text><text class="t navy b m" x="18" y="116">knowledge</text>
+    <line x1="18" y1="136" x2="188" y2="136" class="rule"/>
+    <text class="t gray s" x="18" y="166">Prepare assets</text><text class="t gray s" x="18" y="193">Build evaluation sets</text><text class="t gray s" x="18" y="220">Manage permissions</text>
+  </g>
+  <text class="t orange b l" x="800" y="516">→</text>
+  <g transform="translate(830 390)">
+    <rect class="card" width="206" height="232"/><rect width="206" height="10" fill="#245A88"/>
+    <text class="t blue b s" x="18" y="46">DEVELOP ROLE</text><text class="t navy b m" x="18" y="88">Solution</text><text class="t navy b m" x="18" y="116">architect</text>
+    <line x1="18" y1="136" x2="188" y2="136" class="rule"/>
+    <text class="t gray s" x="18" y="166">Design the solution</text><text class="t gray s" x="18" y="193">Set boundaries</text><text class="t gray s" x="18" y="220">Standardize patterns</text>
+  </g>
+  <text class="t orange b l" x="1048" y="516">→</text>
+  <g transform="translate(1078 390)">
+    <rect class="card" width="206" height="232"/><rect width="206" height="10" fill="#2477FF"/>
+    <text class="t blue b s" x="18" y="46">DELIVERY CORE</text><text class="t navy b m" x="18" y="88">Application</text><text class="t navy b m" x="18" y="116">delivery</text>
+    <line x1="18" y1="136" x2="188" y2="136" class="rule"/>
+    <text class="t gray s" x="18" y="166">Build and integrate</text><text class="t gray s" x="18" y="193">Test and launch</text><text class="t gray s" x="18" y="220">Resolve defects</text>
+  </g>
+  <text class="t orange b l" x="1296" y="516">→</text>
+  <g transform="translate(1326 390)">
+    <rect class="card" width="174" height="232"/><rect width="174" height="10" fill="#6E4BD8"/>
+    <text class="t purple b s" x="16" y="46">NEW CAPABILITY</text><text class="t navy b m" x="16" y="88">Adoption and</text><text class="t navy b m" x="16" y="116">evaluation</text>
+    <line x1="16" y1="136" x2="158" y2="136" class="rule"/>
+    <text class="t gray s" x="16" y="166">Monitor quality</text><text class="t gray s" x="16" y="193">Track adoption</text><text class="t gray s" x="16" y="220">Measure value</text>
+  </g>
+
+  <line x1="1450" y1="660" x2="210" y2="660" stroke="#EB7625" stroke-width="4"/>
+  <polygon points="210,660 228,649 228,671" fill="#EB7625"/>
+  <rect x="390" y="640" width="820" height="40" fill="#fff"/>
+  <text class="t orange b" x="800" y="665" font-size="16px" text-anchor="middle">Operating feedback updates the scenario, source knowledge, and product backlog</text>
+
+  <rect x="78" y="758" width="1444" height="104" class="navy"/>
+  <text class="orange b m" x="110" y="798" font-family="Arial,Noto Sans CJK SC,sans-serif">TARGET STATE</text>
+  <text class="white b" x="330" y="802" font-size="31px" font-family="Arial,Noto Sans CJK SC,sans-serif">Every step has an owner, an output, and a feedback mechanism</text>
+  <text class="white m" x="110" y="839" font-family="Arial,Noto Sans CJK SC,sans-serif">Business frames value · knowledge stays current · solutions remain safe · delivery scales · operations prove results</text>
+</svg>

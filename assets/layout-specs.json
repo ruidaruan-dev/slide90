@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "canvas": {"width": 1280, "height": 720, "ratio": "16:9"},
+  "common": {
+    "section": [58, 28, 1164, 20],
+    "title": [58, 56, 1164, 70],
+    "divider": [58, 136, 1164, 3],
+    "content": [58, 180, 1164, 380],
+    "conclusion": [58, 590, 1164, 82]
+  },
+  "layouts": {
+    "performance-dashboard": {
+      "maxMetrics": 5,
+      "maxBlocks": 4,
+      "zones": {
+        "metricRibbon": [58, 180, 1164, 72],
+        "resultGrid": [58, 272, 1164, 288]
+      }
+    },
+    "evidence-matrix": {
+      "maxMetrics": 5,
+      "maxBlocks": 4,
+      "zones": {
+        "metricRibbon": [58, 180, 1164, 64],
+        "card1": [58, 264, 570, 136],
+        "card2": [652, 264, 570, 136],
+        "card3": [58, 420, 570, 136],
+        "card4": [652, 420, 570, 136]
+      }
+    },
+    "diagnosis-tree": {
+      "maxBlocks": 3,
+      "zones": {
+        "observedResult": [58, 180, 230, 380],
+        "rootIssues": [320, 180, 540, 380],
+        "implication": [892, 180, 330, 380]
+      }
+    },
+    "roadmap": {
+      "maxBlocks": 3,
+      "zones": {
+        "phase1": [58, 180, 372, 380],
+        "phase2": [454, 180, 372, 380],
+        "phase3": [850, 180, 372, 380]
+      }
+    },
+    "capability-loop": {
+      "maxBlocks": 6,
+      "zones": {
+        "structureRibbon": [58, 180, 1164, 58],
+        "businessZone": [58, 258, 330, 302],
+        "internalZone": [404, 258, 818, 302],
+        "feedbackLine": [120, 544, 1040, 16]
+      }
+    },
+    "portfolio-table": {
+      "maxBlocks": 8,
+      "zones": {
+        "table": [58, 180, 1164, 380],
+        "decisionColumnWidth": 210
+      }
+    },
+    "comparison-matrix": {
+      "maxBlocks": 5,
+      "zones": {
+        "criteria": [58, 180, 260, 380],
+        "options": [334, 180, 888, 380]
+      }
+    },
+    "decision-page": {
+      "maxBlocks": 3,
+      "zones": {
+        "recommendation": [58, 180, 1164, 76],
+        "reason1": [58, 280, 372, 280],
+        "reason2": [454, 280, 372, 280],
+        "reason3": [850, 280, 372, 280]
+      }
+    }
+  }
+}

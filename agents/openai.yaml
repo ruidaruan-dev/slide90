@@ -1,0 +1,6 @@
+interface:
+  display_name: "Slide90"
+  short_description: "Build decision-ready executive decks with a fast batch-and-repair loop"
+  default_prompt: "Use $build-executive-report-slides in Fast Loop mode to turn my content into a compact executive presentation deck."
+policy:
+  allow_implicit_invocation: true

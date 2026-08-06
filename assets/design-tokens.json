@@ -1,0 +1,40 @@
+{
+  "canvas": { "ratio": "16:9", "logicalWidth": 1280, "logicalHeight": 720 },
+  "margins": { "left": 58, "right": 58, "top": 28, "bottom": 20 },
+  "colors": {
+    "navy": "#0B1F33",
+    "ink": "#172331",
+    "gray": "#5E6A75",
+    "faint": "#87939F",
+    "rule": "#CDD4DB",
+    "brightBlue": "#2477FF",
+    "mutedBlue": "#245A88",
+    "orange": "#EB7625",
+    "green": "#168A7A",
+    "purple": "#6E4BD8",
+    "paleBlue": "#EAF2FB",
+    "paleOrange": "#FAEBDD",
+    "paleGreen": "#E8F5F1",
+    "palePurple": "#F0ECFB",
+    "white": "#FFFFFF"
+  },
+  "typography": {
+    "fontFallbacks": ["Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", "Arial"],
+    "sectionLabel": { "size": 14, "bold": true },
+    "title": { "size": 32, "bold": true },
+    "subtitle": { "size": 15, "bold": false },
+    "metric": { "size": 20, "bold": true },
+    "cardTitle": { "size": 19, "bold": true },
+    "cardLabel": { "size": 11, "bold": true },
+    "body": { "size": 13, "bold": false },
+    "conclusion": { "size": 17, "bold": true }
+  },
+  "shapes": {
+    "cardBorderWidth": 1,
+    "cardAccentWidth": 8,
+    "titleAccentWidth": 3,
+    "baseSpacing": 8,
+    "shadow": false,
+    "gradient": false
+  }
+}

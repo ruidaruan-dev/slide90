@@ -1,0 +1,58 @@
+[
+  {
+    "id": "quarterly-performance",
+    "prompt": "Turn a quarterly update with five KPIs and three achievements into one executive slide.",
+    "expected_layout": "performance-dashboard",
+    "must_include": ["conclusion-led title", "metric ribbon", "management implication"],
+    "must_not_include": ["generic title", "decorative icons", "invented metrics"]
+  },
+  {
+    "id": "role-fit",
+    "prompt": "Show how four role requirements have been proven through internal projects.",
+    "expected_layout": "evidence-matrix",
+    "must_include": ["four claims", "direct evidence", "proof band"],
+    "must_not_include": ["paragraph cards", "unsupported adjectives"]
+  },
+  {
+    "id": "root-cause",
+    "prompt": "Explain why delivery speed declined and what leadership should change.",
+    "expected_layout": "diagnosis-tree",
+    "must_include": ["observed result", "root causes", "evidence", "implication"],
+    "must_not_include": ["symptoms presented as causes"]
+  },
+  {
+    "id": "six-month-roadmap",
+    "prompt": "Create a July-to-December delivery plan with stage gates.",
+    "expected_layout": "roadmap",
+    "must_include": ["timing", "deliverables", "decision gates"],
+    "must_not_include": ["small explanatory footnotes"]
+  },
+  {
+    "id": "operating-model",
+    "prompt": "Design a closed-loop organization from business demand to operations and evaluation.",
+    "expected_layout": "capability-loop",
+    "must_include": ["five or six roles", "responsibilities", "feedback loop"],
+    "must_not_include": ["ecosystem without handoffs"]
+  },
+  {
+    "id": "project-portfolio",
+    "prompt": "Show eight initiatives, their timing, value, status, and decision needed.",
+    "expected_layout": "portfolio-table",
+    "must_include": ["merged workstreams", "status", "value/result", "decision"],
+    "must_not_include": ["paragraph descriptions"]
+  },
+  {
+    "id": "option-choice",
+    "prompt": "Compare three implementation options across cost, speed, control, and risk.",
+    "expected_layout": "comparison-matrix",
+    "must_include": ["decision criteria", "recommended option", "evidence"],
+    "must_not_include": ["unexplained checkmarks"]
+  },
+  {
+    "id": "approval-page",
+    "prompt": "Ask leadership to approve a budget and owner for the recommended plan.",
+    "expected_layout": "decision-page",
+    "must_include": ["recommendation in title", "three reasons", "explicit ask"],
+    "must_not_include": ["topic-only title"]
+  }
+]

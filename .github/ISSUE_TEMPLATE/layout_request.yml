@@ -1,0 +1,26 @@
+name: Layout request
+description: Propose a reusable executive-report layout
+title: "[Layout]: "
+labels: [enhancement, layout]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: Management question
+      placeholder: Which projects should receive resources next quarter?
+    validations:
+      required: true
+  - type: textarea
+    id: structure
+    attributes:
+      label: Proposed structure
+      description: Describe blocks, reading order, and decision output.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or synthetic example
+      description: Do not upload proprietary decks or watermarked screenshots.
+    validations:
+      required: true

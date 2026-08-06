@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Slide90 logo</title>
+  <desc id="desc">A navy presentation frame with an orange conclusion line.</desc>
+  <rect width="512" height="512" rx="84" fill="#0B1F33"/>
+  <rect x="82" y="92" width="348" height="270" rx="18" fill="#FFFFFF"/>
+  <rect x="112" y="126" width="208" height="24" fill="#0B1F33"/>
+  <rect x="112" y="178" width="120" height="112" fill="#EAF2FB"/>
+  <rect x="248" y="178" width="152" height="112" fill="#F3F5F7"/>
+  <rect x="112" y="310" width="288" height="20" fill="#EB7625"/>
+  <path d="M196 400h120l22 38H174z" fill="#FFFFFF"/>
+</svg>
