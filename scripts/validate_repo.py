@@ -23,6 +23,8 @@ REQUIRED = (
     "agents/openai.yaml",
     "assets/design-tokens.json",
     "assets/layout-specs.json",
+    "assets/slide90-demo.gif",
+    "assets/slide90-demo-poster.png",
     "references/fast-loop.md",
     "scripts/validate_deck_spec.py",
     "references/layout-library.md",

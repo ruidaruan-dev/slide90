@@ -13,6 +13,7 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 - Fast Loop deck-level batching and targeted-repair protocol.
 - Stable layout coordinates and pre-render structural validator.
 - Transparent five-slide runtime benchmark.
+- Reproducible animated homepage demo showing the Fast Loop workflow.
 - Executive writing and content-compression rules.
 - Cross-platform installer for Codex, Claude Code, Cursor, Gemini CLI, and WorkBuddy.
 - Synthetic evidence-matrix and operating-model examples.

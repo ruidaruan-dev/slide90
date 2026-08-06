@@ -8,6 +8,8 @@ In our controlled five-slide runtime benchmark, the Fast Loop reduced wall time 
 
 [中文说明](README.zh-CN.md) · [Benchmark](BENCHMARK.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
+![Slide90 Fast Loop demo](assets/slide90-demo.gif)
+
 ## What it produces
 
 | Evidence matrix | Operating model |

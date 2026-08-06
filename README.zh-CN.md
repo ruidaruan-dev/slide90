@@ -10,6 +10,8 @@ Slide90 是一个面向企业管理汇报的开源 Agent Skill。它把工作总
 
 [English](README.md) · [测试说明](BENCHMARK.md) · [路线图](ROADMAP.md) · [参与贡献](CONTRIBUTING.md)
 
+![Slide90 Fast Loop 演示](assets/slide90-demo.gif)
+
 ## 为什么值得用
 
 - **先回答领导问题**：标题直接给结论，不再使用“工作介绍”“未来规划”等空标题。
