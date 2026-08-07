@@ -36,4 +36,24 @@ test("candidate scorer reads facts from nested WorkBuddy-style content", async (
   const report = scoreCandidates({ ...suite, cases: [expected] }, submission);
   assert.equal(report.status, "pass");
   assert.equal(report.summary.fact_retention_percent, 100);
+  assert.equal(report.summary.action_title_percent, 100);
+  assert.equal(report.summary.prompt_echo_cases, 0);
+});
+
+test("candidate scorer rejects topic-only titles and complete prompt echoes", async () => {
+  const suite = JSON.parse(await fs.readFile(casesUrl, "utf8"));
+  const expected = suite.cases[0];
+  const submission = {
+    cases: [{
+      id: expected.id,
+      layout: expected.expected_layout,
+      title: "Performance",
+      content: expected.prompt
+    }]
+  };
+  const report = scoreCandidates({ ...suite, cases: [expected] }, submission);
+  assert.equal(report.status, "fail");
+  assert.equal(report.summary.action_title_percent, 0);
+  assert.equal(report.summary.prompt_echo_cases, 1);
+  assert.match(report.results[0].errors.join("\n"), /prompt echo/);
 });
