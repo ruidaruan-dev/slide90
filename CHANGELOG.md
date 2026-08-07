@@ -14,6 +14,10 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 - `render-slide` and `replace-slide` workflows for targeted page generation and repair.
 - P1 acceptance gate covering full-deck stability, single-page output, locked-page preservation, editability, and the 600-second ceiling.
 
+### Fixed
+
+- Replaced capsule-like structural containers with square management-reporting frames and added a regression check that rejects `roundRect` shapes in the six-layout fixture.
+
 ## [0.2.0-alpha.1] - 2026-08-06
 
 ### Added

@@ -26,13 +26,11 @@ export function addText(slide, text, position, options = {}) {
 }
 
 
-export function addRect(pptx, slide, position, fill, line = COLORS.rule, radius = 0) {
-  slide.addShape(radius ? pptx.ShapeType.roundRect : pptx.ShapeType.rect, {
+export function addRect(pptx, slide, position, fill, line = COLORS.rule, _radius = 0) {
+  slide.addShape(pptx.ShapeType.rect, {
     ...position,
-    rectRadius: radius,
     fill: { color: fill },
-    line: line ? { color: line, width: 0.8 } : { color: fill, transparency: 100 },
-    radius
+    line: line ? { color: line, width: 0.8 } : { color: fill, transparency: 100 }
   });
 }
 

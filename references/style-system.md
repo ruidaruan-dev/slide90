@@ -51,7 +51,7 @@ Preferred fonts: Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, PingFang
 - Card accent: 7–8 px on the left or top.
 - Title accent: 3 px orange line covering about 12% of the divider.
 - Arrows: simple, flat, orange.
-- Corners: square or subtly rounded.
+- Corners: square for structural containers, tables, evidence cards, phase cards, metric bands, and conclusion strips. Do not use capsule or pill-shaped frames for business information; they reduce usable width and weaken alignment. Reserve rounded forms only for a genuinely small status tag when the platform cannot express the state through text color or fill.
 - No gradients or shadows.
 
 ## Density

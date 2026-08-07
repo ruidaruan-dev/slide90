@@ -43,7 +43,7 @@ node bin/slide90.mjs replace-slide examples/p1/deck-spec.zh-CN.json --slide 5 \
 npm run verify:p1
 ```
 
-最新一次P1验收用时 **1.089秒**：连续生成三次六页PPT并验证一致性，检查可编辑形状、中文字体和必须保留事实，单独生成第3页，替换第5页，并证明其他5页的页面XML完全未变化。完整检查超过600秒会直接失败。结果见 [`benchmarks/results/p1-verification-latest.json`](benchmarks/results/p1-verification-latest.json)。该时间仅代表本地渲染与校验，不包含模型推理、排队、网络传输和人工确认。
+当前P1验收约用时 **1.3秒**：连续生成三次六页PPT并验证一致性，检查可编辑形状、中文字体和必须保留事实，单独生成第3页，替换第5页，并证明其他5页的页面XML完全未变化。完整检查超过600秒会直接失败；精确结果见 [`benchmarks/results/p1-verification-latest.json`](benchmarks/results/p1-verification-latest.json)。该时间仅代表本地渲染与校验，不包含模型推理、排队、网络传输和人工确认。
 
 现在已经证明“生产链路稳定”，但尚未声称所有真实汇报都达到80分。下一项核心证据是10套中文虚构业务材料的人工可用性评分。
 

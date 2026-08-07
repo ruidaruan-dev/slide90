@@ -1,16 +1,16 @@
 {
   "version": "0.3.0-alpha.1",
   "status": "pass",
-  "generated_at": "2026-08-07T08:48:43.245Z",
+  "generated_at": "2026-08-07T09:02:35.558Z",
   "positioning": "Fast, stable, editable 80-point executive drafts; refinement remains targeted and optional.",
   "budget_seconds": 600,
-  "total_seconds": 1.089,
+  "total_seconds": 1.249,
   "supported_renderer_layouts": 6,
   "fixture_slides": 6,
   "must_keep_facts": 4,
   "full_deck_stability_runs": 3,
-  "stable_semantic_fingerprint": "457ac2e44944ead65500b8655934e1bb7f9c17e85d28bc7bcdfb023ba02c4adc",
-  "maximum_full_deck_render_seconds": 0.181,
+  "stable_semantic_fingerprint": "2d8da43a2c3b316751dcd21fda52ae3f6e3cd6d7bf4dc2d58b94b4d79b1795c6",
+  "maximum_full_deck_render_seconds": 0.233,
   "single_slide_render": "pass",
   "targeted_replacement": "pass",
   "unaffected_slides_preserved": 5,
@@ -26,32 +26,32 @@
   "checks": [
     {
       "name": "validate-six-layout-fixture",
-      "duration_ms": 166.508,
+      "duration_ms": 190.571,
       "status": "pass"
     },
     {
       "name": "full-deck-render-1",
-      "duration_ms": 181.187,
+      "duration_ms": 231.126,
       "status": "pass"
     },
     {
       "name": "full-deck-render-2",
-      "duration_ms": 177.994,
+      "duration_ms": 204.51,
       "status": "pass"
     },
     {
       "name": "full-deck-render-3",
-      "duration_ms": 176.488,
+      "duration_ms": 197.901,
       "status": "pass"
     },
     {
       "name": "single-slide-render",
-      "duration_ms": 170.132,
+      "duration_ms": 191.093,
       "status": "pass"
     },
     {
       "name": "targeted-slide-replacement",
-      "duration_ms": 183.991,
+      "duration_ms": 203.439,
       "status": "pass"
     }
   ]

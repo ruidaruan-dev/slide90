@@ -41,7 +41,7 @@ Run the P1 delivery gate:
 npm run verify:p1
 ```
 
-The latest checked P1 gate passes in **1.089 seconds**. It validates the six-layout fixture, renders the full deck three times, verifies semantic stability, checks editable shapes and Chinese font declarations, renders one page independently, replaces slide 5, and proves that the other five slide XML files remain unchanged. It fails above 600 seconds. See [`benchmarks/results/p1-verification-latest.json`](benchmarks/results/p1-verification-latest.json). Model inference, queueing, network transfer, and human approval are outside this renderer measurement.
+The checked P1 gate currently completes in about **1.3 seconds**. It validates the six-layout fixture, renders the full deck three times, verifies semantic stability, checks editable shapes and Chinese font declarations, renders one page independently, replaces slide 5, and proves that the other five slide XML files remain unchanged. It fails above 600 seconds. See [`benchmarks/results/p1-verification-latest.json`](benchmarks/results/p1-verification-latest.json) for the exact latest run. Model inference, queueing, network transfer, and human approval are outside this renderer measurement.
 
 The project now proves a stable production path; it does **not yet claim** that every real-world deck reaches the 80-point usability bar. A ten-deck human-scored Chinese benchmark is the next evidence milestone.
 

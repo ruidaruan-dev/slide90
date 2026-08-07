@@ -60,6 +60,7 @@ For one-page output or repair:
 - Use the title as the main conclusion; never use a generic title such as “能力介绍” when a decision statement is possible.
 - Prefer evidence to adjectives. Replace “经验丰富” with an internal project, metric, user count, value result, or operating mechanism.
 - Use a strict grid. Align every card edge, baseline, column, and divider.
+- Use square structural frames. Do not wrap metrics, evidence, phases, roles, recommendations, or conclusions in capsules, ovals, or heavily rounded cards.
 - Keep the background white. Use pale fills only to define groups or evidence bands.
 - Use navy for structure, blue/green/purple for functional distinction, and orange only for emphasis, transition, or management attention.
 - Avoid gradients, shadows, 3D shapes, stock photos, decorative icons, and ornamental arrows.

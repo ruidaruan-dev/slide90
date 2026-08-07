@@ -48,6 +48,7 @@ test("six high-frequency layouts render as one editable Chinese deck", async (co
   assert.equal(xml.length, 6);
   assert.ok(xml.every((value) => value.includes("Microsoft YaHei")), "every Chinese slide must declare a CJK font");
   assert.ok(xml.every((value) => (value.match(/<p:sp>/g) || []).length >= 12), "slides must remain editable");
+  assert.ok(xml.every((value) => !value.includes('prst="roundRect"')), "business information must use square structural frames");
 });
 
 
