@@ -18,3 +18,22 @@ test("candidate scorer detects wrong layouts, missing facts, and forbidden claim
   assert.ok(report.summary.fact_retention_percent < 100);
   assert.equal(report.summary.forbidden_claim_hits, 1);
 });
+
+test("candidate scorer reads facts from nested WorkBuddy-style content", async () => {
+  const suite = JSON.parse(await fs.readFile(casesUrl, "utf8"));
+  const expected = suite.cases[0];
+  const submission = {
+    cases: [{
+      id: expected.id,
+      layout: expected.expected_layout,
+      title: expected.expected_title_intent,
+      content: {
+        metrics: expected.required_facts.slice(0, 3).map((value) => ({ value })),
+        blocks: [{ bullets: expected.required_facts.slice(3) }]
+      }
+    }]
+  };
+  const report = scoreCandidates({ ...suite, cases: [expected] }, submission);
+  assert.equal(report.status, "pass");
+  assert.equal(report.summary.fact_retention_percent, 100);
+});
