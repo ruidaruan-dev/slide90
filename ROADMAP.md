@@ -26,8 +26,10 @@
 - [x] Six high-frequency editable management layouts.
 - [x] Chinese six-slide acceptance fixture and CJK font declaration.
 - [x] Multi-slide stability and locked-page checks under a 10-minute ceiling.
+- [x] Five project-reporting layouts: charter, health, milestone Gantt, RAID, and solution flow.
+- [x] Synthetic five-slide project fixture with a repeated-render 10-minute delivery gate.
 - [ ] Human-scored 80-point usability benchmark across ten synthetic Chinese decks.
-- [ ] Board update, project review, transformation, and role-fit starter packs.
+- [ ] Board update, transformation, and role-fit starter packs.
 
 ## 0.4 — Expanded PowerPoint adapters
 

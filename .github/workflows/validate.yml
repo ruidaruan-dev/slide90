@@ -29,6 +29,10 @@ jobs:
           python -m unittest discover -s tests
       - name: Verify P0 delivery gate
         run: SLIDE90_P0_REPORT=/tmp/p0-verification.json npm run verify:p0
+      - name: Verify editable layouts and repair loop
+        run: SLIDE90_P1_REPORT=/tmp/p1-verification.json npm run verify:p1
+      - name: Verify project-reporting layouts
+        run: SLIDE90_PROJECT_REPORT=/tmp/project-verification.json npm run verify:project
       - name: Build skill package
         run: python scripts/package_skill.py
       - name: Upload package

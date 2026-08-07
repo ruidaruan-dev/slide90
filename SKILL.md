@@ -30,10 +30,11 @@ Read [references/fast-loop.md](references/fast-loop.md) for the batch specificat
    - For “能力要求—内部证据—匹配判断”, read [references/evidence-matrix.md](references/evidence-matrix.md).
    - For “业务角色—内部团队—交付闭环—反馈迭代”, read [references/capability-loop.md](references/capability-loop.md).
    - For a hybrid page, use one layout as the main structure and borrow at most one secondary device from another layout.
+   - For project reporting, route explicitly: project definition → `project-charter`; red/amber/green management scan → `project-health`; dated dependencies → `milestone-gantt`; risks/issues/assumptions/decisions/actions → `raid-table`; business-to-technology traceability → `solution-flow`.
 4. Rewrite vague language using [references/content-compression.md](references/content-compression.md). Validate the complete specification before rendering when scripts can run:
    `node bin/slide90.mjs validate deck-spec.json`
 5. Render all slides in one batch. Apply [assets/design-tokens.json](assets/design-tokens.json) and the exact coordinate zones in [assets/layout-specs.json](assets/layout-specs.json). Produce editable shapes and text; do not flatten the full slide into one image.
-   The P1 renderer creates editable PowerPoint directly for six high-frequency layouts: `performance-dashboard`, `evidence-matrix`, `roadmap`, `capability-loop`, `portfolio-table`, and `decision-page`:
+   The renderer creates editable PowerPoint directly for eleven layouts: `performance-dashboard`, `evidence-matrix`, `roadmap`, `capability-loop`, `portfolio-table`, `decision-page`, `project-charter`, `project-health`, `milestone-gantt`, `raid-table`, and `solution-flow`:
    `node bin/slide90.mjs render deck-spec.json --output deck.pptx`
 6. Render the complete deck once and inspect it at normal presentation size. Record failures by slide number and element ID.
 7. Lock passing slides. Repair only the failed text, element, or slide, then rerender only affected slides when the platform permits it. Stop after two repair passes unless the user explicitly requests exhaustive refinement.

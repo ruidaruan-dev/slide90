@@ -48,6 +48,11 @@ REQUIRED = (
     "src/render/layouts/roadmap.mjs",
     "src/render/layouts/portfolio-table.mjs",
     "src/render/layouts/decision-page.mjs",
+    "src/render/layouts/project-charter.mjs",
+    "src/render/layouts/project-health.mjs",
+    "src/render/layouts/milestone-gantt.mjs",
+    "src/render/layouts/raid-table.mjs",
+    "src/render/layouts/solution-flow.mjs",
     "examples/end-to-end/source.md",
     "examples/end-to-end/deck-spec.json",
     "benchmarks/cases/five-slide.json",
@@ -58,6 +63,9 @@ REQUIRED = (
     "examples/p1/replacement-slide-5.zh-CN.json",
     "scripts/verify_p1.mjs",
     "benchmarks/results/p1-verification-latest.json",
+    "examples/project-report/deck-spec.zh-CN.json",
+    "scripts/verify_project_reporting.mjs",
+    "benchmarks/results/project-reporting-verification-latest.json",
 )
 SCAN_DIRS = ("references", "examples", "evals", "assets", "schema", "bin", "src", "benchmarks", "tests-node")
 PUBLIC_TEXT_FILES = ("README.md", "README.zh-CN.md", "SKILL.md", "CONTRIBUTING.md", "ROADMAP.md", "BENCHMARK.md")
@@ -176,15 +184,19 @@ def validate_evals(errors: list[str]) -> None:
         fail(errors, "evaluation suite must contain three cases for each of eight layout routes")
 
 
-def validate_p0_contract(errors: list[str]) -> None:
+def validate_renderer_contract(errors: list[str]) -> None:
     package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
     if package.get("bin", {}).get("slide90") != "bin/slide90.mjs":
         fail(errors, "package.json must expose the slide90 CLI")
     schema = json.loads((ROOT / "schema/deck-spec.schema.json").read_text(encoding="utf-8"))
     layouts = schema["$defs"]["slide"]["properties"]["layout"]["enum"]
-    for layout in ("performance-dashboard", "evidence-matrix", "roadmap", "capability-loop", "portfolio-table", "decision-page"):
+    for layout in (
+        "performance-dashboard", "evidence-matrix", "roadmap", "capability-loop",
+        "portfolio-table", "decision-page", "project-charter", "project-health",
+        "milestone-gantt", "raid-table", "solution-flow",
+    ):
         if layout not in layouts:
-            fail(errors, f"deck schema is missing P0 layout: {layout}")
+            fail(errors, f"deck schema is missing renderer layout: {layout}")
 
 
 def main() -> int:
@@ -197,7 +209,7 @@ def main() -> int:
         validate_json(errors)
         validate_svgs(errors)
         validate_evals(errors)
-        validate_p0_contract(errors)
+        validate_renderer_contract(errors)
     if errors:
         print("Validation failed:")
         for error in errors:

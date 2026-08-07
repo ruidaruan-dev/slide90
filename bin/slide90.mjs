@@ -23,8 +23,9 @@ Commands:
   render-slide  Render one selected page without regenerating its content.
   replace-slide Replace one page in the spec and deterministically rerender the deck.
 
-P1 renderer layouts:
-  performance-dashboard, evidence-matrix, roadmap, capability-loop, portfolio-table, decision-page
+Renderer layouts:
+  performance-dashboard, evidence-matrix, roadmap, capability-loop, portfolio-table, decision-page,
+  project-charter, project-health, milestone-gantt, raid-table, solution-flow
 `;
 
 

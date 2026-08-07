@@ -1,6 +1,6 @@
 {
   "benchmark": "slide90-p0-renderer",
-  "generated_at": "2026-08-06T10:07:33.503Z",
+  "generated_at": "2026-08-07T09:22:34.877Z",
   "environment": {
     "node": "v24.14.0",
     "platform": "linux",
@@ -11,17 +11,17 @@
   "slides": 5,
   "runs": 3,
   "sequential_ms": [
-    28.174,
-    18.928,
-    15.189
+    15.543,
+    17.702,
+    12.9
   ],
   "batch_ms": [
-    7.959,
-    8.573,
-    4.844
+    8.605,
+    5.799,
+    3.868
   ],
-  "median_sequential_ms": 18.928,
-  "median_batch_ms": 7.959,
-  "speedup": 2.38,
-  "reduction_percent": 58
+  "median_sequential_ms": 15.543,
+  "median_batch_ms": 5.799,
+  "speedup": 2.68,
+  "reduction_percent": 62.7
 }

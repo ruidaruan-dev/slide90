@@ -4,6 +4,11 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Added
+
+- Five deterministic project-reporting renderers: project charter, project health, milestone Gantt, RAID table, and business-to-technology solution flow.
+- A synthetic five-slide project-report fixture and repeated-render verification gate under the 600-second ceiling.
+
 ## [0.3.0-alpha.1] - 2026-08-07
 
 ### Added

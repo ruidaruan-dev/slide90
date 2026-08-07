@@ -68,6 +68,12 @@
         "owner": {"type": "string", "maxLength": 48},
         "timing": {"type": "string", "maxLength": 48},
         "status": {"type": "string", "maxLength": 32},
+        "category": {"enum": ["risk", "assumption", "issue", "decision", "action"]},
+        "impact": {"type": "string", "maxLength": 120},
+        "action": {"type": "string", "maxLength": 140},
+        "dependency": {"type": "string", "maxLength": 80},
+        "start_period": {"type": "integer", "minimum": 1, "maximum": 12},
+        "end_period": {"type": "integer", "minimum": 1, "maximum": 12},
         "group": {"enum": ["business", "internal", "external"]},
         "accent": {"enum": ["blue", "green", "purple", "orange", "navy"]}
       }
@@ -91,7 +97,19 @@
             "portfolio-table",
             "comparison-matrix",
             "decision-page"
+            ,"project-charter"
+            ,"project-health"
+            ,"milestone-gantt"
+            ,"raid-table"
+            ,"solution-flow"
           ]
+        },
+        "periods": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1, "maxLength": 16}
         },
         "metrics": {
           "type": "array",
@@ -126,6 +144,73 @@
                     {"required": ["body", "evidence"]}
                   ]
                 }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "project-charter"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion", "metrics"],
+            "properties": {
+              "metrics": {"minItems": 2, "maxItems": 4},
+              "blocks": {
+                "minItems": 4,
+                "maxItems": 4,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "evidence"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "project-health"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion", "metrics"],
+            "properties": {
+              "metrics": {"minItems": 3, "maxItems": 5},
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 4,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "evidence"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "milestone-gantt"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion", "periods"],
+            "properties": {
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 8,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["owner", "status", "start_period", "end_period"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "raid-table"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion"],
+            "properties": {
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 8,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["category", "impact", "action", "owner", "timing", "status"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "solution-flow"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion"],
+            "properties": {
+              "blocks": {
+                "minItems": 4,
+                "maxItems": 6,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["role", "body", "evidence"]}]}
               }
             }
           }

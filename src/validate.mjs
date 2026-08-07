@@ -51,6 +51,16 @@ function customErrors(spec) {
     if (GENERIC_TITLES.has(String(slide.title || "").trim().toLowerCase())) {
       errors.push({ instancePath: `/slides/${index}/title`, keyword: "action-title", message: "must state a conclusion, not a topic" });
     }
+    if (slide.layout === "milestone-gantt") {
+      for (const [blockIndex, block] of (slide.blocks || []).entries()) {
+        if (block.end_period < block.start_period) {
+          errors.push({ instancePath: `/slides/${index}/blocks/${blockIndex}/end_period`, keyword: "period-order", message: "must be greater than or equal to start_period" });
+        }
+        if (block.end_period > (slide.periods || []).length) {
+          errors.push({ instancePath: `/slides/${index}/blocks/${blockIndex}/end_period`, keyword: "period-range", message: "must not exceed the number of periods" });
+        }
+      }
+    }
   }
   return errors;
 }
