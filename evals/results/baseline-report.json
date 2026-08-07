@@ -11,7 +11,7 @@
   },
   "results": [
     {
-      "id": "performance-fictional-retail",
+      "id": "case-001",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -20,7 +20,7 @@
       "errors": []
     },
     {
-      "id": "performance-fictional-learning",
+      "id": "case-002",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -29,7 +29,7 @@
       "errors": []
     },
     {
-      "id": "performance-fictional-support",
+      "id": "case-003",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -38,7 +38,7 @@
       "errors": []
     },
     {
-      "id": "evidence-fictional-program-lead",
+      "id": "case-004",
       "status": "fail",
       "layout_correct": false,
       "retained_facts": 4,
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "id": "evidence-fictional-vendor",
+      "id": "case-005",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -58,7 +58,7 @@
       "errors": []
     },
     {
-      "id": "evidence-fictional-readiness",
+      "id": "case-006",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -67,7 +67,7 @@
       "errors": []
     },
     {
-      "id": "diagnosis-fictional-delivery",
+      "id": "case-007",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -76,7 +76,7 @@
       "errors": []
     },
     {
-      "id": "diagnosis-fictional-forecast",
+      "id": "case-008",
       "status": "fail",
       "layout_correct": false,
       "retained_facts": 5,
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "id": "diagnosis-fictional-inventory",
+      "id": "case-009",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 4,
@@ -96,7 +96,7 @@
       "errors": []
     },
     {
-      "id": "roadmap-fictional-adoption",
+      "id": "case-010",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -105,7 +105,7 @@
       "errors": []
     },
     {
-      "id": "roadmap-fictional-data-hub",
+      "id": "case-011",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -114,7 +114,7 @@
       "errors": []
     },
     {
-      "id": "roadmap-fictional-launch",
+      "id": "case-012",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -123,7 +123,7 @@
       "errors": []
     },
     {
-      "id": "capability-fictional-service-loop",
+      "id": "case-013",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -132,7 +132,7 @@
       "errors": []
     },
     {
-      "id": "capability-fictional-demand-loop",
+      "id": "case-014",
       "status": "fail",
       "layout_correct": false,
       "retained_facts": 6,
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "id": "capability-fictional-knowledge-loop",
+      "id": "case-015",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -152,7 +152,7 @@
       "errors": []
     },
     {
-      "id": "portfolio-fictional-delivery",
+      "id": "case-016",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -161,7 +161,7 @@
       "errors": []
     },
     {
-      "id": "portfolio-fictional-assets",
+      "id": "case-017",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -170,7 +170,7 @@
       "errors": []
     },
     {
-      "id": "portfolio-fictional-transformation",
+      "id": "case-018",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -179,7 +179,7 @@
       "errors": []
     },
     {
-      "id": "comparison-fictional-hosting",
+      "id": "case-019",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -188,7 +188,7 @@
       "errors": []
     },
     {
-      "id": "comparison-fictional-workflow",
+      "id": "case-020",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -197,7 +197,7 @@
       "errors": []
     },
     {
-      "id": "comparison-fictional-capacity",
+      "id": "case-021",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -206,7 +206,7 @@
       "errors": []
     },
     {
-      "id": "decision-fictional-expansion",
+      "id": "case-022",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 6,
@@ -215,7 +215,7 @@
       "errors": []
     },
     {
-      "id": "decision-fictional-access",
+      "id": "case-023",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
@@ -224,7 +224,7 @@
       "errors": []
     },
     {
-      "id": "decision-fictional-stop",
+      "id": "case-024",
       "status": "pass",
       "layout_correct": true,
       "retained_facts": 5,
