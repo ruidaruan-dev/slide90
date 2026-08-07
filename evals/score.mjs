@@ -12,8 +12,17 @@ function normalize(value) {
   return String(value || "").toLowerCase().replace(/[，。；：、,.:%％+—–\-×/（）()\s]/g, "");
 }
 
+function flattenText(value, seen = new Set()) {
+  if (value === null || value === undefined) return "";
+  if (["string", "number", "boolean"].includes(typeof value)) return String(value);
+  if (typeof value !== "object" || seen.has(value)) return "";
+  seen.add(value);
+  if (Array.isArray(value)) return value.map((item) => flattenText(item, seen)).join(" ");
+  return Object.values(value).map((item) => flattenText(item, seen)).join(" ");
+}
+
 function contains(candidate, phrase) {
-  const text = normalize(`${candidate.title || ""} ${candidate.content || ""}`);
+  const text = normalize(flattenText(candidate));
   const whole = normalize(phrase);
   if (text.includes(whole)) return true;
   const tokens = phrase.split(/[，。；：、,.:%％+—–\-×/（）()\s]/).map(normalize).filter((token) => token.length >= 2);
