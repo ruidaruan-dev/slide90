@@ -3,39 +3,65 @@
   "summary": {
     "cases": 24,
     "submitted": 24,
-    "passed": 21,
+    "passed": 0,
     "layout_accuracy_percent": 87.5,
     "fact_retention_percent": 100,
     "forbidden_claim_hits": 0,
-    "forbidden_claim_checks": 72
+    "forbidden_claim_checks": 72,
+    "valid_candidate_percent": 100,
+    "action_title_percent": 0,
+    "structured_content_percent": 100,
+    "prompt_echo_cases": 24,
+    "average_content_to_prompt_ratio": 1
   },
   "results": [
     {
       "id": "case-001",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-002",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-003",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-004",
@@ -44,36 +70,63 @@
       "retained_facts": 4,
       "total_facts": 4,
       "forbidden_claims": [],
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
       "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt",
         "layout: expected evidence-matrix, got roadmap"
       ]
     },
     {
       "id": "case-005",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-006",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-007",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-008",
@@ -82,54 +135,95 @@
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
       "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt",
         "layout: expected diagnosis-tree, got roadmap"
       ]
     },
     {
       "id": "case-009",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 4,
       "total_facts": 4,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-010",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-011",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-012",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-013",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-014",
@@ -138,99 +232,175 @@
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
       "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt",
         "layout: expected capability-loop, got portfolio-table"
       ]
     },
     {
       "id": "case-015",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-016",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-017",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-018",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-019",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-020",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-021",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-022",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 6,
       "total_facts": 6,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-023",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     },
     {
       "id": "case-024",
-      "status": "pass",
+      "status": "fail",
       "layout_correct": true,
       "retained_facts": 5,
       "total_facts": 5,
       "forbidden_claims": [],
-      "errors": []
+      "title_quality": false,
+      "prompt_echo": true,
+      "structured_content": true,
+      "content_to_prompt_ratio": 1,
+      "errors": [
+        "title quality: title repeats the fixture label instead of stating a conclusion | title lacks a decision, result, contrast, or implication",
+        "prompt echo: content contains the complete source prompt"
+      ]
     }
   ]
 }
