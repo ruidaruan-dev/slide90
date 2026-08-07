@@ -45,7 +45,7 @@ npm run verify:p0
 
 核心测试集位于 [`evals/cases.json`](evals/cases.json)：八类管理页面各3题，每题包含预期版式、标题结论、必须保留的事实和禁止臆造项。它当前验证“考题和答案标准是否完整”；后续规划器提交候选 deck spec 后，再按同一答案标准评分。
 
-运行 `npm run eval:baseline` 可以用不读取答案字段的规则基线完成24题，并输出结构正确率、事实保留率和禁止项命中数。该基线只验证评测闭环，不代表最终AI设计质量。
+运行 `npm run eval:baseline` 可以用不读取答案字段的规则基线完成24题，并输出结构正确率、事实保留率和禁止项命中数。外部Agent必须只读取 `evals/blind-prompts.json`；其中使用不可推断页面类型的匿名ID，并要求保持英文及原始数字、日期和专有名词。该基线只验证评测闭环，不代表最终AI设计质量。
 
 正式数据契约位于 [`schema/deck-spec.schema.json`](schema/deck-spec.schema.json)。公开样例完整保留了[虚构原始材料](examples/end-to-end/source.md) → [deck spec](examples/end-to-end/deck-spec.json) → [可编辑 PPTX](examples/end-to-end/output/slide90-p0-demo.pptx) → PNG 预览的链路。
 
