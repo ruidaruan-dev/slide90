@@ -43,7 +43,7 @@ The gate runs automated tests, validates the 24-case management-reporting eval s
 
 The core suite at [`evals/cases.json`](evals/cases.json) contains three synthetic prompts for each of the eight management layouts. Every case defines its expected layout, title intent, required facts, and facts that must not be invented.
 
-Run `npm run eval:baseline` to answer all 24 prompts with a rule-based planner that cannot read the answer-key fields, then score layout routing, factual retention, and forbidden-claim hits. This is a harness smoke test, not a claim about final AI design quality.
+Run `npm run eval:baseline` to answer all 24 prompts with a rule-based planner that cannot read the answer-key fields, then score layout routing, factual retention, and forbidden-claim hits. External agents must read only `evals/blind-prompts.json`, whose opaque IDs do not reveal layouts and whose instructions require English output with original numbers, dates, and proper nouns preserved. This is a harness smoke test, not a claim about final AI design quality.
 
 The contract is published at [`schema/deck-spec.schema.json`](schema/deck-spec.schema.json). The fixture preserves the full path from [synthetic source notes](examples/end-to-end/source.md) to [deck specification](examples/end-to-end/deck-spec.json), [editable PPTX](examples/end-to-end/output/slide90-p0-demo.pptx), and PNG preview.
 
