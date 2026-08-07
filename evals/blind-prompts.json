@@ -6,7 +6,10 @@
   "response_requirements": [
     "Answer in English.",
     "Preserve every number, date, currency value, proper noun, and named system exactly as written in the prompt.",
-    "Do not infer a layout from the case ID."
+    "Do not infer a layout from the case ID.",
+    "Write a 5–24 word conclusion-led title that states a result, decision, contrast, risk, or implication; do not begin with 'Fictional case'.",
+    "Organize content into at least two meaningful sections or fields.",
+    "Do not copy the complete source prompt into content; preserve its facts while restructuring them."
   ],
   "cases": [
     {
