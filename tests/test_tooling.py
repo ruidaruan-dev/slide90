@@ -33,6 +33,8 @@ class ToolingTests(unittest.TestCase):
             self.assertTrue((destination / "SKILL.md").is_file())
             self.assertTrue((destination / "references/layout-library.md").is_file())
             self.assertTrue((destination / "examples/evidence-matrix.svg").is_file())
+            self.assertTrue((destination / "bin/slide90.mjs").is_file())
+            self.assertTrue((destination / "schema/deck-spec.schema.json").is_file())
 
     def test_dry_run_does_not_write(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -52,6 +54,9 @@ class ToolingTests(unittest.TestCase):
         self.assertIn("build-executive-report-slides/assets/design-tokens.json", names)
         self.assertIn("build-executive-report-slides/assets/layout-specs.json", names)
         self.assertIn("build-executive-report-slides/examples/operating-model.svg", names)
+        self.assertIn("build-executive-report-slides/bin/slide90.mjs", names)
+        self.assertIn("build-executive-report-slides/src/render/index.mjs", names)
+        self.assertIn("build-executive-report-slides/schema/deck-spec.schema.json", names)
         self.assertFalse(any("README" in name for name in names))
 
     def test_deck_spec_validator(self) -> None:

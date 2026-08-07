@@ -4,6 +4,37 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Added
+
+- Five deterministic project-reporting renderers: project charter, project health, milestone Gantt, RAID table, and business-to-technology solution flow.
+- A synthetic five-slide project-report fixture and repeated-render verification gate under the 600-second ceiling.
+
+## [0.3.0-alpha.1] - 2026-08-07
+
+### Added
+
+- Lightweight brief contract for preserving user structure and must-keep facts.
+- Editable renderers for performance dashboards, roadmaps, portfolio tables, and decision pages.
+- Six-layout Chinese management-reporting fixture with CJK font handling.
+- `render-slide` and `replace-slide` workflows for targeted page generation and repair.
+- P1 acceptance gate covering full-deck stability, single-page output, locked-page preservation, editability, and the 600-second ceiling.
+
+### Fixed
+
+- Replaced capsule-like structural containers with square management-reporting frames and added a regression check that rejects `roundRect` shapes in the six-layout fixture.
+
+## [0.2.0-alpha.1] - 2026-08-06
+
+### Added
+
+- Formal JSON Schema for the deck specification contract.
+- Unified `slide90 validate` and `slide90 render` CLI.
+- First-party editable PPTX renderers for `evidence-matrix` and `capability-loop`.
+- Public source-to-spec-to-PPTX-to-PNG fixture.
+- Node schema and render tests, office-render overflow QA, and artifact-tool import QA.
+- Reproducible five-slide renderer benchmark with raw JSON results.
+- Ten-minute P0 delivery gate with three-run semantic stability verification.
+
 ## [0.1.0] - 2026-08-06
 
 ### Added

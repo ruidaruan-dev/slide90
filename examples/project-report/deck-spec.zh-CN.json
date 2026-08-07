@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "deck_title": "虚构案例：智能服务项目月度管理汇报",
+  "audience": "虚构公司的项目管理委员会",
+  "decision": "是否按当前范围继续推进试运行并完成年度验收",
+  "brief": {
+    "objective": "用五类项目管理页面呈现项目目标、健康度、里程碑、管理事项和端到端方案",
+    "structure_mode": "preserve-user-structure",
+    "structure_confirmed": true,
+    "must_keep_facts": [
+      "9月试运行",
+      "12月完成验收",
+      "范围状态为绿色",
+      "进度状态为黄色"
+    ]
+  },
+  "language": "zh-CN",
+  "theme": "slide90",
+  "slides": [
+    {
+      "number": 1,
+      "section": "01 / 项目定义",
+      "title": "智能服务项目以缩短响应周期为目标，范围、责任与成功标准已明确",
+      "subtitle": "一页统一项目边界，避免目标、范围和验收口径在执行中漂移。",
+      "layout": "project-charter",
+      "metrics": [
+        {"value": "6个月", "label": "项目周期", "accent": "blue"},
+        {"value": "5人", "label": "核心项目组", "accent": "green"},
+        {"value": "3个", "label": "首批业务场景", "accent": "purple"},
+        {"value": "30%", "label": "目标响应时长下降", "accent": "orange"}
+      ],
+      "blocks": [
+        {"id": "background", "title": "项目背景", "body": "服务请求分散在多个入口，人工分派和重复检索拉长响应周期。", "evidence": "当前平均首次响应为8小时。", "accent": "blue"},
+        {"id": "objective", "title": "项目目标", "body": "统一服务入口，以流程编排和知识辅助提升响应效率。", "evidence": "目标首次响应时长下降30%。", "accent": "green"},
+        {"id": "scope", "title": "项目范围", "body": "覆盖咨询、异常分派和知识检索；不替代高风险人工审批。", "evidence": "首批限定3个高频场景。", "accent": "purple"},
+        {"id": "success", "title": "成功标准", "body": "以采用、效率、质量和合规四类指标共同验收。", "evidence": "9月试运行，12月完成验收。", "accent": "orange"}
+      ],
+      "conclusion": "项目以清晰边界换取快速交付：先验证3个场景，再依据量化结果决定扩展。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 2,
+      "section": "02 / 项目健康度",
+      "title": "项目整体可控，但接口联调延迟使进度转黄，需要管理层协调资源",
+      "subtitle": "用红黄绿状态定位管理关注点，正文只解释偏差、影响和下一步。",
+      "layout": "project-health",
+      "metrics": [
+        {"value": "绿色", "label": "范围｜按基线执行", "accent": "green"},
+        {"value": "黄色", "label": "进度｜联调延迟5天", "accent": "orange"},
+        {"value": "绿色", "label": "成本｜预算消耗46%", "accent": "green"},
+        {"value": "绿色", "label": "质量｜测试通过率94%", "accent": "green"},
+        {"value": "黄色", "label": "风险｜权限方案待定", "accent": "orange"}
+      ],
+      "blocks": [
+        {"id": "complete", "title": "本期完成", "body": "入口原型、知识检索和两条核心流程已完成内部测试。", "evidence": "18项计划任务完成16项。", "accent": "green"},
+        {"id": "variance", "title": "主要偏差", "body": "客户主数据接口晚于计划开放，端到端联调被压缩。", "evidence": "进度状态为黄色，当前延迟5天。", "accent": "orange"},
+        {"id": "milestone", "title": "下一里程碑", "body": "完成接口联调、安全复核和种子用户培训后进入试运行。", "evidence": "9月试运行，门槛为测试通过率95%。", "accent": "blue"},
+        {"id": "attention", "title": "管理关注", "body": "需明确数据脱敏责任人与接口资源优先级。", "evidence": "范围状态为绿色，不建议压缩业务范围。", "accent": "purple"}
+      ],
+      "conclusion": "管理动作聚焦两项：本周锁定接口资源，下周完成权限方案评审；其余工作按基线推进。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 3,
+      "section": "03 / 里程碑计划",
+      "title": "六条工作流按前置依赖排布，9月试运行后进入优化与验收",
+      "subtitle": "甘特图突出责任、起止月份和当前状态，不堆叠任务说明。",
+      "layout": "milestone-gantt",
+      "periods": ["7月", "8月", "9月", "10月", "11月", "12月"],
+      "blocks": [
+        {"id": "design", "title": "需求与流程设计", "owner": "业务负责人", "status": "已完成", "start_period": 1, "end_period": 2, "accent": "green"},
+        {"id": "data", "title": "数据与知识准备", "owner": "数据工程", "status": "进行中", "start_period": 1, "end_period": 3, "accent": "blue"},
+        {"id": "integration", "title": "系统接口与权限", "owner": "平台团队", "status": "需关注", "start_period": 2, "end_period": 3, "accent": "orange"},
+        {"id": "build", "title": "应用开发与联调", "owner": "交付团队", "status": "进行中", "start_period": 2, "end_period": 4, "accent": "purple"},
+        {"id": "pilot", "title": "试运行与运营优化", "owner": "运营负责人", "status": "9月启动", "start_period": 3, "end_period": 5, "accent": "blue"},
+        {"id": "acceptance", "title": "价值复盘与年度验收", "owner": "项目经理", "status": "12月验收", "start_period": 5, "end_period": 6, "accent": "green"}
+      ],
+      "conclusion": "关键路径为接口权限→应用联调→9月试运行；保留两个月运营优化窗口，12月完成验收。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 4,
+      "section": "04 / RAID管理",
+      "title": "当前两项问题需升级处理，其余风险与决策均已明确责任和时点",
+      "subtitle": "每条事项同时呈现影响、动作、负责人和期限，形成可追踪管理台账。",
+      "layout": "raid-table",
+      "blocks": [
+        {"id": "interface", "category": "issue", "title": "客户主数据接口延迟", "impact": "联调窗口压缩5天", "action": "安排专人并行完成字段映射", "owner": "平台负责人", "timing": "8月16日", "status": "升级处理中", "accent": "orange"},
+        {"id": "permission", "category": "risk", "title": "敏感字段权限边界未定", "impact": "试运行范围可能受限", "action": "完成脱敏方案和权限评审", "owner": "安全负责人", "timing": "8月20日", "status": "需关注", "accent": "orange"},
+        {"id": "pilot", "category": "decision", "title": "维持9月试运行", "impact": "保留年度验收窗口", "action": "接口延迟通过并行测试消化", "owner": "项目委员会", "timing": "已决策", "status": "继续执行", "accent": "blue"},
+        {"id": "training", "category": "action", "title": "种子用户培训", "impact": "影响采用率与反馈质量", "action": "按角色完成两轮场景演练", "owner": "运营负责人", "timing": "8月30日", "status": "准备中", "accent": "green"},
+        {"id": "volume", "category": "assumption", "title": "首月请求量保持稳定", "impact": "决定算力与运营排班", "action": "每周复核请求量和峰值并发", "owner": "产品负责人", "timing": "试运行期", "status": "持续验证", "accent": "purple"}
+      ],
+      "conclusion": "RAID台账的作用不是记录问题，而是确保每个偏差都有明确动作、责任人与关闭时点。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 5,
+      "section": "05 / 业务与技术方案",
+      "title": "以服务场景为牵引，流程、数据、系统与AI能力形成同一条交付链",
+      "subtitle": "方案从业务问题出发，逐层落到流程改造、数据治理、系统能力和价值验收。",
+      "layout": "solution-flow",
+      "blocks": [
+        {"id": "problem", "role": "为什么做", "title": "业务问题", "body": "入口分散\n人工分派\n知识检索慢", "evidence": "首次响应平均8小时", "accent": "orange"},
+        {"id": "process", "role": "怎么改流程", "title": "流程改造", "body": "统一入口\n自动分类\n异常升级", "evidence": "减少两次人工转派", "accent": "blue"},
+        {"id": "data", "role": "准备什么数据", "title": "数据治理", "body": "主数据对齐\n知识版本\n权限与脱敏", "evidence": "关键知识每月复核", "accent": "green"},
+        {"id": "technology", "role": "建设什么能力", "title": "系统与AI方案", "body": "工作流编排\n检索增强\n模型评测与监控", "evidence": "高风险动作保留人工确认", "accent": "purple"},
+        {"id": "value", "role": "如何验收", "title": "业务价值", "body": "响应更快\n质量可控\n过程可追溯", "evidence": "目标响应时长下降30%", "accent": "navy"}
+      ],
+      "conclusion": "智能化不是独立叠加模型，而是用业务场景拉通流程、数据与系统建设，并以经营指标验收。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "slide90",
+  "version": "0.3.0-alpha.1",
+  "description": "Fast, stable 80-point executive drafts from a validated deck specification.",
+  "type": "module",
+  "bin": {
+    "slide90": "bin/slide90.mjs"
+  },
+  "scripts": {
+    "validate:example": "node bin/slide90.mjs validate examples/end-to-end/deck-spec.json",
+    "render:example": "node bin/slide90.mjs render examples/end-to-end/deck-spec.json --output examples/end-to-end/output/slide90-p0-demo.pptx",
+    "eval:validate": "node evals/validate.mjs",
+    "eval:baseline": "node evals/run-baseline.mjs && node evals/score.mjs evals/results/baseline-candidates.json evals/results/baseline-report.json",
+    "benchmark": "node benchmarks/run.mjs",
+    "verify:p0": "node scripts/verify_p0.mjs",
+    "verify:p1": "node scripts/verify_p1.mjs",
+    "verify:project": "node scripts/verify_project_reporting.mjs",
+    "test": "node --test tests-node/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "jszip": "^3.10.1",
+    "pptxgenjs": "^4.0.1"
+  },
+  "keywords": [
+    "agent-skills",
+    "powerpoint",
+    "pptx",
+    "presentation",
+    "executive-reporting"
+  ],
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "deck_title": "Five-slide renderer benchmark",
+  "audience": "Open-source maintainers",
+  "decision": "Measure batching overhead with a reproducible public fixture",
+  "language": "en-US",
+  "slides": [
+    {
+      "number": 1,
+      "section": "01 / EVIDENCE",
+      "title": "Four evidence streams make the case testable before rendering",
+      "layout": "evidence-matrix",
+      "metrics": [{"value": "4", "label": "evidence streams"}],
+      "blocks": [
+        {"id": "a1", "title": "Demand", "body": "Define the management question.", "evidence": "One decision is named.", "proof": ["1 decision"]},
+        {"id": "a2", "title": "Delivery", "body": "Connect claims to proof.", "evidence": "Every card contains direct evidence.", "proof": ["4 proof blocks"]},
+        {"id": "a3", "title": "Quality", "body": "Validate before drawing.", "evidence": "Schema checks run before rendering.", "proof": ["0 structural errors"]},
+        {"id": "a4", "title": "Decision", "body": "Close with an implication.", "evidence": "The conclusion names the next action.", "proof": ["1 conclusion"]}
+      ],
+      "conclusion": "The benchmark input is deterministic, synthetic, and safe to publish."
+    },
+    {
+      "number": 2,
+      "section": "02 / LOOP",
+      "title": "Four roles complete a compact production and feedback loop",
+      "layout": "capability-loop",
+      "metrics": [{"value": "4", "label": "connected roles"}],
+      "blocks": [
+        {"id": "b1", "title": "Key user", "role": "Demand", "group": "business", "body": "Frame the problem"},
+        {"id": "b2", "title": "Knowledge owner", "role": "Knowledge", "group": "business", "body": "Approve the rules"},
+        {"id": "b3", "title": "Engineer", "role": "Build", "group": "internal", "body": "Implement the flow"},
+        {"id": "b4", "title": "Evaluator", "role": "Measure", "group": "internal", "body": "Feed back results"}
+      ],
+      "conclusion": "A visible operating loop makes ownership and missing roles explicit."
+    },
+    {
+      "number": 3,
+      "section": "03 / EVIDENCE",
+      "title": "A second evidence page tests repeated layout production",
+      "layout": "evidence-matrix",
+      "metrics": [{"value": "2", "label": "repeated layouts"}],
+      "blocks": [
+        {"id": "c1", "title": "Structure", "body": "Reuse fixed geometry.", "evidence": "Coordinates stay constant."},
+        {"id": "c2", "title": "Content", "body": "Change facts only.", "evidence": "Text remains editable."},
+        {"id": "c3", "title": "Batch", "body": "Write one deck package.", "evidence": "All slides render together."},
+        {"id": "c4", "title": "Repair", "body": "Preserve passing pages.", "evidence": "Stable IDs enable targeting."}
+      ],
+      "conclusion": "Fixed layouts reduce production variance without flattening the content."
+    },
+    {
+      "number": 4,
+      "section": "04 / LOOP",
+      "title": "A second role chain tests repeated connector and node rendering",
+      "layout": "capability-loop",
+      "metrics": [{"value": "5", "label": "operating roles"}],
+      "blocks": [
+        {"id": "d1", "title": "Sponsor", "role": "Direction", "group": "business", "body": "Set the outcome"},
+        {"id": "d2", "title": "Owner", "role": "Adoption", "group": "business", "body": "Change the work"},
+        {"id": "d3", "title": "Architect", "role": "Design", "group": "internal", "body": "Define the pattern"},
+        {"id": "d4", "title": "Engineer", "role": "Build", "group": "internal", "body": "Deliver the system"},
+        {"id": "d5", "title": "Operator", "role": "Improve", "group": "internal", "body": "Measure and refine"}
+      ],
+      "conclusion": "Connectors are drawn behind nodes, preserving a clear visual hierarchy."
+    },
+    {
+      "number": 5,
+      "section": "05 / EVIDENCE",
+      "title": "The final page measures the marginal cost of another slide",
+      "layout": "evidence-matrix",
+      "metrics": [{"value": "5", "label": "slides in one batch"}],
+      "blocks": [
+        {"id": "e1", "title": "Input", "body": "Read one validated spec.", "evidence": "One JSON file drives the deck."},
+        {"id": "e2", "title": "Render", "body": "Create native objects.", "evidence": "Shapes and text remain editable."},
+        {"id": "e3", "title": "Package", "body": "Write one PPTX.", "evidence": "The output is a standard ZIP package."},
+        {"id": "e4", "title": "Report", "body": "Publish median timings.", "evidence": "Raw run values are stored in JSON."}
+      ],
+      "conclusion": "The public runner measures renderer overhead; it does not simulate model or network latency."
+    }
+  ]
+}

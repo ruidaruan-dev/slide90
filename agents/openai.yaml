@@ -1,6 +1,6 @@
 interface:
   display_name: "Slide90"
-  short_description: "Build decision-ready executive decks with a fast batch-and-repair loop"
-  default_prompt: "Use $build-executive-report-slides in Fast Loop mode to turn my content into a compact executive presentation deck."
+  short_description: "Generate a usable 80-point executive deck without formatting work"
+  default_prompt: "Use $build-executive-report-slides to preserve my reporting structure and quickly generate an editable 80-point executive deck; ask only if the structure is genuinely unclear."
 policy:
   allow_implicit_invocation: true

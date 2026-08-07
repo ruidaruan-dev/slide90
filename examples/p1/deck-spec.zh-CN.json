@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "deck_title": "虚构案例：企业AI工具Q3试点与Q4扩展建议",
+  "audience": "虚构公司的数字化管理委员会",
+  "decision": "是否批准Q4从15名种子用户扩展到60名用户",
+  "brief": {
+    "objective": "沿用用户提供的结果—证据—计划—组织—交付—决策结构，形成可直接讨论的管理汇报",
+    "structure_mode": "preserve-user-structure",
+    "structure_confirmed": true,
+    "must_keep_facts": [
+      "15名种子用户",
+      "周活跃率73%",
+      "4个可复用场景",
+      "Q4扩展到60名用户"
+    ]
+  },
+  "language": "zh-CN",
+  "theme": "slide90",
+  "slides": [
+    {
+      "number": 1,
+      "section": "01 / 试点结果",
+      "title": "Q3试点达到扩展门槛，15名种子用户已验证四类可复用场景",
+      "subtitle": "15名种子用户、周活跃率73%、4个可复用场景和效率证据指向同一结论。",
+      "layout": "performance-dashboard",
+      "metrics": [
+        {"value": "15名", "label": "种子用户", "accent": "blue"},
+        {"value": "73%", "label": "周活跃率", "accent": "green"},
+        {"value": "4个", "label": "可复用场景", "accent": "purple"},
+        {"value": "28%", "label": "平均处理时长下降", "accent": "orange"}
+      ],
+      "blocks": [
+        {"id": "adoption", "title": "使用行为稳定", "body": "账号开通后连续六周跟踪活跃与任务完成。", "evidence": "最近三周周活跃率均高于70%。", "accent": "blue"},
+        {"id": "reuse", "title": "场景能够复用", "body": "高频任务沉淀为共享提示词与工作流。", "evidence": "会议纪要、资料检索、周报和需求分析完成复用。", "accent": "green"},
+        {"id": "efficiency", "title": "效率可量化", "body": "对比试点前后相同类型任务的平均处理时长。", "evidence": "四类任务平均处理时长下降28%。", "accent": "purple"},
+        {"id": "feedback", "title": "运营机制跑通", "body": "培训、周回访和问题台账形成固定节奏。", "evidence": "累计关闭21项使用与权限问题。", "accent": "orange"}
+      ],
+      "conclusion": "Q3已完成从工具可用到场景可复用的验证，具备Q4小规模扩展基础。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 2,
+      "section": "02 / 扩展依据",
+      "title": "四项直接证据表明扩展风险可控，但权限治理必须同步前置",
+      "subtitle": "扩展判断不依赖主观评价，而由需求、平台、协作和治理证据共同支撑。",
+      "layout": "evidence-matrix",
+      "metrics": [
+        {"value": "21项", "label": "已关闭问题", "accent": "blue"},
+        {"value": "4个", "label": "复用场景", "accent": "green"},
+        {"value": "2周", "label": "账号发放周期", "accent": "orange"}
+      ],
+      "blocks": [
+        {"id": "demand", "title": "需求基础", "body": "扩展对象需要存在稳定、高频、可验证的知识工作。", "evidence": "首批已筛选出8个部门的34项候选任务。", "proof": ["34项任务", "8个部门"], "accent": "blue"},
+        {"id": "platform", "title": "平台基础", "body": "统一账号、模型访问和使用记录必须能够支撑扩量。", "evidence": "试点期间服务可用率99.5%，使用记录完整留存。", "proof": ["99.5%可用率", "日志留存"], "accent": "green"},
+        {"id": "operation", "title": "运营基础", "body": "扩展后仍需保持培训、回访和技能沉淀节奏。", "evidence": "已形成一套90分钟培训和六周运营手册。", "proof": ["90分钟培训", "六周手册"], "accent": "purple"},
+        {"id": "governance", "title": "治理前置", "body": "敏感数据、外发内容和高风险任务需要明确边界。", "evidence": "扩展前仍需完成两类敏感字段脱敏规则。", "proof": ["2类规则待完成"], "accent": "orange"}
+      ],
+      "conclusion": "建议将权限治理设为扩展前置门槛，并保持分批发放而非一次性全面开放。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 3,
+      "section": "03 / Q4路径",
+      "title": "Q4分三阶段扩展至60名用户，以数据门控制每阶段投入",
+      "layout": "roadmap",
+      "blocks": [
+        {"id": "phase-one", "title": "固化试点方法", "timing": "10月", "body": "完成权限规则\n固化培训与回访\n补齐四个场景模板", "evidence": "形成扩展操作手册", "accent": "blue"},
+        {"id": "phase-two", "title": "滚动扩展用户", "timing": "11月", "body": "按周发放账号\n覆盖30至60名用户\n持续跟踪活跃与价值", "evidence": "周活跃率保持65%以上", "accent": "purple"},
+        {"id": "phase-three", "title": "评估扩量决策", "timing": "12月", "body": "复盘采用与效率\n核算单位用户成本\n评估下一年度范围", "evidence": "提交年度扩量建议", "accent": "green"}
+      ],
+      "conclusion": "扩展不是一次性采购，而是用阶段门控制风险、用运营数据换取下一阶段投入。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 4,
+      "section": "04 / 组织闭环",
+      "title": "业务端提出真实任务，内部交付链将场景转化为可持续运营能力",
+      "subtitle": "六类角色覆盖需求、知识、数据、方案、交付和评测，避免AI项目停在演示阶段。",
+      "layout": "capability-loop",
+      "metrics": [
+        {"value": "2类", "label": "业务网络角色", "accent": "orange"},
+        {"value": "4类", "label": "内部交付角色", "accent": "blue"},
+        {"value": "1条", "label": "运营反馈闭环", "accent": "green"}
+      ],
+      "blocks": [
+        {"id": "key-user", "title": "关键用户", "role": "场景提出", "group": "business", "body": "提交高频任务\n验证实际效果", "accent": "orange"},
+        {"id": "knowledge-owner", "title": "知识管理员", "role": "知识治理", "group": "business", "body": "确认知识边界\n维护内容版本", "accent": "orange"},
+        {"id": "data-engineer", "title": "数据与知识工程", "role": "数据准备", "group": "internal", "body": "连接数据源\n建设检索与权限", "accent": "green"},
+        {"id": "solution-architect", "title": "解决方案架构", "role": "方案设计", "group": "internal", "body": "选择模型与流程\n控制安全边界", "accent": "blue"},
+        {"id": "delivery-engineer", "title": "AI应用交付", "role": "工程落地", "group": "internal", "body": "开发与集成\n上线可复用组件", "accent": "purple"},
+        {"id": "evaluation", "title": "运营与评测", "role": "持续改进", "group": "internal", "body": "跟踪采用与质量\n推动问题闭环", "accent": "orange"}
+      ],
+      "conclusion": "组织设计的目标不是增加角色名称，而是覆盖AI生产链条上的每一个责任断点。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 5,
+      "section": "05 / 交付组合",
+      "title": "六项Q4交付按价值和前置条件排布，避免扩展工作挤占业务项目",
+      "layout": "portfolio-table",
+      "blocks": [
+        {"id": "access-rule", "title": "权限与脱敏规则", "owner": "平台与安全", "timing": "10月上旬", "status": "前置任务", "body": "完成敏感字段规则", "evidence": "支持后续账号扩展", "accent": "orange"},
+        {"id": "playbook", "title": "场景模板包", "owner": "AI应用组", "timing": "10月中旬", "status": "建设中", "body": "固化四类场景", "evidence": "减少重复设计", "accent": "blue"},
+        {"id": "cohort-one", "title": "首批扩展", "owner": "运营负责人", "timing": "10月下旬", "status": "待启动", "body": "扩展至30名用户", "evidence": "验证培训承载能力", "accent": "green"},
+        {"id": "cohort-two", "title": "第二批扩展", "owner": "运营负责人", "timing": "11月", "status": "待启动", "body": "扩展至60名用户", "evidence": "保持65%周活跃率", "accent": "green"},
+        {"id": "value-review", "title": "场景价值复盘", "owner": "业务与AI组", "timing": "12月上旬", "status": "待评估", "body": "复核时间节省", "evidence": "形成量化价值清单", "accent": "purple"},
+        {"id": "annual-decision", "title": "年度扩量建议", "owner": "项目负责人", "timing": "12月下旬", "status": "决策点", "body": "评估下一年度范围", "evidence": "提交预算与人员建议", "accent": "orange"}
+      ],
+      "conclusion": "项目组合按前置治理、能力建设、分批扩展和价值复盘排序，确保扩量与交付并行。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    },
+    {
+      "number": 6,
+      "section": "06 / 管理决策",
+      "title": "建议批准Q4扩展至60名用户，同时设置三项不可绕过的管理条件",
+      "subtitle": "建议Q4扩展到60名用户，并以权限完成、周活跃率和场景价值作为继续投入的条件。",
+      "layout": "decision-page",
+      "blocks": [
+        {"id": "security-gate", "title": "权限规则先完成", "body": "未完成敏感字段规则前，不开放对应部门和任务。", "evidence": "两类脱敏规则必须在10月完成", "accent": "orange"},
+        {"id": "adoption-gate", "title": "采用数据决定扩量", "body": "按周滚动发放账号，低于门槛时暂停下一批。", "evidence": "周活跃率门槛设为65%", "accent": "blue"},
+        {"id": "value-gate", "title": "价值证据决定续投", "body": "年底复核效率、复用和单位用户成本。", "evidence": "至少六个场景形成量化数据", "accent": "green"}
+      ],
+      "conclusion": "请批准分阶段扩展方案；任何一项管理条件未满足，均不自动进入下一阶段。",
+      "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+    }
+  ]
+}

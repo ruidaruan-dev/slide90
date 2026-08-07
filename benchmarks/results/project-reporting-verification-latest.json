@@ -1,0 +1,56 @@
+{
+  "version": "0.3.0-alpha.1",
+  "status": "pass",
+  "generated_at": "2026-08-07T09:22:34.408Z",
+  "budget_seconds": 600,
+  "total_seconds": 1.174,
+  "supported_renderer_layouts": 11,
+  "project_fixture_slides": 5,
+  "project_layouts": [
+    "project-charter",
+    "project-health",
+    "milestone-gantt",
+    "raid-table",
+    "solution-flow"
+  ],
+  "full_deck_stability_runs": 3,
+  "stable_semantic_fingerprint": "14cc7ff26b80ee3b9cdb292246e05afd8bed1067eac04ebd546312aa6e774b8e",
+  "maximum_full_deck_render_seconds": 0.248,
+  "single_slide_render": "pass",
+  "square_structural_frames": true,
+  "chinese_font_declared_on_all_slides": true,
+  "editable_shape_counts": [
+    46,
+    45,
+    75,
+    59,
+    45
+  ],
+  "checks": [
+    {
+      "name": "validate-project-fixture",
+      "duration_ms": 213.858,
+      "status": "pass"
+    },
+    {
+      "name": "project-deck-render-1",
+      "duration_ms": 229.594,
+      "status": "pass"
+    },
+    {
+      "name": "project-deck-render-2",
+      "duration_ms": 236.395,
+      "status": "pass"
+    },
+    {
+      "name": "project-deck-render-3",
+      "duration_ms": 247.983,
+      "status": "pass"
+    },
+    {
+      "name": "single-project-slide-render",
+      "duration_ms": 225.934,
+      "status": "pass"
+    }
+  ]
+}

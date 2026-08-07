@@ -1,0 +1,58 @@
+{
+  "version": "0.3.0-alpha.1",
+  "status": "pass",
+  "generated_at": "2026-08-07T09:22:32.983Z",
+  "positioning": "Fast, stable, editable 80-point executive drafts; refinement remains targeted and optional.",
+  "budget_seconds": 600,
+  "total_seconds": 1.388,
+  "supported_renderer_layouts": 6,
+  "fixture_slides": 6,
+  "must_keep_facts": 4,
+  "full_deck_stability_runs": 3,
+  "stable_semantic_fingerprint": "2d8da43a2c3b316751dcd21fda52ae3f6e3cd6d7bf4dc2d58b94b4d79b1795c6",
+  "maximum_full_deck_render_seconds": 0.249,
+  "single_slide_render": "pass",
+  "targeted_replacement": "pass",
+  "unaffected_slides_preserved": 5,
+  "chinese_font_declared_on_all_slides": true,
+  "editable_shape_counts": [
+    42,
+    51,
+    32,
+    62,
+    53,
+    27
+  ],
+  "checks": [
+    {
+      "name": "validate-six-layout-fixture",
+      "duration_ms": 207.621,
+      "status": "pass"
+    },
+    {
+      "name": "full-deck-render-1",
+      "duration_ms": 231.176,
+      "status": "pass"
+    },
+    {
+      "name": "full-deck-render-2",
+      "duration_ms": 242.088,
+      "status": "pass"
+    },
+    {
+      "name": "full-deck-render-3",
+      "duration_ms": 248.948,
+      "status": "pass"
+    },
+    {
+      "name": "single-slide-render",
+      "duration_ms": 228.005,
+      "status": "pass"
+    },
+    {
+      "name": "targeted-slide-replacement",
+      "duration_ms": 206.726,
+      "status": "pass"
+    }
+  ]
+}

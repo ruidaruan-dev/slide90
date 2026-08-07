@@ -5,27 +5,45 @@ description: "Create or redesign executive-facing corporate presentation slides 
 
 # Build Executive Report Slides
 
-Create sober, high-density executive slides that remain readable on a meeting-room screen. Preserve the user's facts while turning lists into a visible argument.
+Create a fast, stable, editable **80-point draft** that is already usable in a management meeting. Preserve the user's reporting structure and facts, remove formatting work, and leave 100-point polishing to targeted follow-up rather than repeated full-deck generation.
 
 ## Operating mode
 
-Use **Fast Loop** by default for decks of 2–12 slides. Plan the complete deck once, render it as one batch, lock every slide that passes QA, and repair only failed slides or elements. Never restart the whole deck because one slide fails.
+Use **Fast Loop** by default for decks of 2–12 slides. When the user already provides a reporting sequence, preserve it. Show a compact page map only when interaction permits; do not reopen settled logic or ask the user to select technical layout IDs. When the structure is genuinely unclear, ask no more than three short questions about audience, purpose, and the decision required.
 
-Use the single-slide workflow only when the user requests one page. Read [references/fast-loop.md](references/fast-loop.md) for the batch specification, validation commands, and repair protocol.
+Plan the complete deck once, render it as one batch, lock every slide that passes QA, and repair only failed slides or elements. Never restart the whole deck because one slide fails.
+
+For an installed local runtime, keep the complete planning-to-delivery loop within 10 minutes. Use the phase budgets in [references/fast-loop.md](references/fast-loop.md); exclude only first-time dependency installation, model queueing, network transfer, and source approval delays.
+
+Support both user entry points:
+
+- **Whole deck:** plan once and batch-render the complete deck.
+- **Single slide:** generate, redesign, or replace only the requested page while preserving every other page.
+
+Read [references/fast-loop.md](references/fast-loop.md) for the batch specification, validation commands, and repair protocol.
 
 ## Fast Loop workflow
 
-1. Extract the deck-level decision, audience, storyline, factual constraints, and strongest evidence once for the complete deck.
+1. Extract the audience, objective, existing page order, decision, must-keep facts, and strongest evidence once. Default to `preserve-user-structure`; use `propose-lightly` only when no usable structure exists.
 2. Create one structured deck specification before drawing any shapes. Give every slide a conclusion-led title, layout ID, evidence blocks, source references, and conclusion. Use the schema in [references/fast-loop.md](references/fast-loop.md).
 3. Read [references/layout-library.md](references/layout-library.md) once and select one primary layout per slide. For the two canonical layouts:
    - For “能力要求—内部证据—匹配判断”, read [references/evidence-matrix.md](references/evidence-matrix.md).
    - For “业务角色—内部团队—交付闭环—反馈迭代”, read [references/capability-loop.md](references/capability-loop.md).
    - For a hybrid page, use one layout as the main structure and borrow at most one secondary device from another layout.
+   - For project reporting, route explicitly: project definition → `project-charter`; red/amber/green management scan → `project-health`; dated dependencies → `milestone-gantt`; risks/issues/assumptions/decisions/actions → `raid-table`; business-to-technology traceability → `solution-flow`.
 4. Rewrite vague language using [references/content-compression.md](references/content-compression.md). Validate the complete specification before rendering when scripts can run:
-   `python scripts/validate_deck_spec.py deck-spec.json`
+   `node bin/slide90.mjs validate deck-spec.json`
 5. Render all slides in one batch. Apply [assets/design-tokens.json](assets/design-tokens.json) and the exact coordinate zones in [assets/layout-specs.json](assets/layout-specs.json). Produce editable shapes and text; do not flatten the full slide into one image.
+   The renderer creates editable PowerPoint directly for eleven layouts: `performance-dashboard`, `evidence-matrix`, `roadmap`, `capability-loop`, `portfolio-table`, `decision-page`, `project-charter`, `project-health`, `milestone-gantt`, `raid-table`, and `solution-flow`:
+   `node bin/slide90.mjs render deck-spec.json --output deck.pptx`
 6. Render the complete deck once and inspect it at normal presentation size. Record failures by slide number and element ID.
 7. Lock passing slides. Repair only the failed text, element, or slide, then rerender only affected slides when the platform permits it. Stop after two repair passes unless the user explicitly requests exhaustive refinement.
+
+For one-page output or repair:
+
+`node bin/slide90.mjs render-slide deck-spec.json --slide 3 --output slide-3.pptx`
+
+`node bin/slide90.mjs replace-slide deck-spec.json --slide 5 --with replacement.json --output updated.pptx --spec-output updated.json`
 
 ## Performance guards
 
@@ -35,6 +53,7 @@ Use the single-slide workflow only when the user requests one page. Read [refere
 - Do not ask the model to calculate stable coordinates when `assets/layout-specs.json` already defines them.
 - Do not use visual rendering to discover errors that the structural validator can catch first.
 - Preserve the user's facts and source mapping in the deck specification so repairs do not trigger renewed source analysis.
+- Treat 10 minutes as the complete delivery ceiling and 80-point usability as the default stopping condition. Do not spend the whole budget chasing decorative perfection.
 
 ## Non-negotiable rules
 
@@ -42,6 +61,7 @@ Use the single-slide workflow only when the user requests one page. Read [refere
 - Use the title as the main conclusion; never use a generic title such as “能力介绍” when a decision statement is possible.
 - Prefer evidence to adjectives. Replace “经验丰富” with an internal project, metric, user count, value result, or operating mechanism.
 - Use a strict grid. Align every card edge, baseline, column, and divider.
+- Use square structural frames. Do not wrap metrics, evidence, phases, roles, recommendations, or conclusions in capsules, ovals, or heavily rounded cards.
 - Keep the background white. Use pale fills only to define groups or evidence bands.
 - Use navy for structure, blue/green/purple for functional distinction, and orange only for emphasis, transition, or management attention.
 - Avoid gradients, shadows, 3D shapes, stock photos, decorative icons, and ornamental arrows.

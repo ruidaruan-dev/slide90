@@ -75,6 +75,34 @@
         "reason2": [454, 280, 372, 280],
         "reason3": [850, 280, 372, 280]
       }
+    },
+    "project-charter": {
+      "maxMetrics": 4,
+      "maxBlocks": 4,
+      "zones": {
+        "projectRibbon": [58, 180, 1164, 58],
+        "charterGrid": [58, 258, 1164, 302]
+      }
+    },
+    "project-health": {
+      "maxMetrics": 5,
+      "maxBlocks": 4,
+      "zones": {
+        "healthRibbon": [58, 180, 1164, 70],
+        "managementGrid": [58, 270, 1164, 290]
+      }
+    },
+    "milestone-gantt": {
+      "maxBlocks": 8,
+      "zones": {"table": [58, 180, 1164, 380]}
+    },
+    "raid-table": {
+      "maxBlocks": 8,
+      "zones": {"table": [58, 180, 1164, 380]}
+    },
+    "solution-flow": {
+      "maxBlocks": 6,
+      "zones": {"flow": [58, 210, 1164, 330]}
     }
   }
 }

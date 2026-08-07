@@ -10,7 +10,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 OUTPUT = DIST / "slide90.skill.zip"
-INCLUDE = ("SKILL.md", "agents", "assets", "references", "examples")
+INCLUDE = (
+    "SKILL.md",
+    "agents",
+    "assets",
+    "references",
+    "examples",
+    "bin",
+    "src",
+    "schema",
+    "package.json",
+    "package-lock.json",
+)
 FIXED_TIME = (2026, 1, 1, 0, 0, 0)
 
 
@@ -21,7 +32,12 @@ def iter_files() -> list[Path]:
         if path.is_file():
             files.append(path)
         elif path.is_dir():
-            files.extend(sorted(p for p in path.rglob("*") if p.is_file()))
+            files.extend(
+                sorted(
+                    p for p in path.rglob("*")
+                    if p.is_file() and "slide90-p0-demo" not in p.parts
+                )
+            )
         else:
             raise SystemExit(f"Missing runtime item: {path}")
     return sorted(files)
@@ -34,7 +50,7 @@ def main() -> None:
             relative = source.relative_to(ROOT)
             info = zipfile.ZipInfo(f"build-executive-report-slides/{relative.as_posix()}", FIXED_TIME)
             info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o644 << 16
+            info.external_attr = (0o755 if relative.parts[0] == "bin" else 0o644) << 16
             archive.writestr(info, source.read_bytes())
     print(f"Created {OUTPUT}")
 

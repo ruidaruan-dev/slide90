@@ -1,0 +1,123 @@
+{
+  "version": "0.2.0-alpha.1",
+  "status": "pass",
+  "generated_at": "2026-08-07T09:22:31.340Z",
+  "scope": "Installed local runtime; excludes dependency installation, model inference, network, and queue latency.",
+  "budget_seconds": 600,
+  "total_seconds": 2.77,
+  "stability_runs": 3,
+  "stable_semantic_fingerprint": "5460cf93dea0d1fe953d8c5e8b35832272850bc0fd663f6bd4279aec291021aa",
+  "maximum_generation_seconds": 0.241,
+  "generation_runs": [
+    {
+      "run": 1,
+      "duration_ms": 225.523,
+      "bytes": 129725,
+      "slide_count": 2,
+      "source_notes_count": 2,
+      "fingerprint": "5460cf93dea0d1fe953d8c5e8b35832272850bc0fd663f6bd4279aec291021aa",
+      "slides": [
+        {
+          "slide": "ppt/slides/slide1.xml",
+          "editable_shapes": 54,
+          "text_runs": 40,
+          "pictures": 0
+        },
+        {
+          "slide": "ppt/slides/slide2.xml",
+          "editable_shapes": 62,
+          "text_runs": 37,
+          "pictures": 0
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "duration_ms": 217.683,
+      "bytes": 129725,
+      "slide_count": 2,
+      "source_notes_count": 2,
+      "fingerprint": "5460cf93dea0d1fe953d8c5e8b35832272850bc0fd663f6bd4279aec291021aa",
+      "slides": [
+        {
+          "slide": "ppt/slides/slide1.xml",
+          "editable_shapes": 54,
+          "text_runs": 40,
+          "pictures": 0
+        },
+        {
+          "slide": "ppt/slides/slide2.xml",
+          "editable_shapes": 62,
+          "text_runs": 37,
+          "pictures": 0
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "duration_ms": 241.077,
+      "bytes": 129725,
+      "slide_count": 2,
+      "source_notes_count": 2,
+      "fingerprint": "5460cf93dea0d1fe953d8c5e8b35832272850bc0fd663f6bd4279aec291021aa",
+      "slides": [
+        {
+          "slide": "ppt/slides/slide1.xml",
+          "editable_shapes": 54,
+          "text_runs": 40,
+          "pictures": 0
+        },
+        {
+          "slide": "ppt/slides/slide2.xml",
+          "editable_shapes": 62,
+          "text_runs": 37,
+          "pictures": 0
+        }
+      ]
+    }
+  ],
+  "benchmark": {
+    "slides": 5,
+    "median_sequential_ms": 14.248,
+    "median_batch_ms": 6.452,
+    "speedup": 2.21,
+    "reduction_percent": 54.7
+  },
+  "checks": [
+    {
+      "name": "node-tests",
+      "duration_ms": 1271.933,
+      "status": "pass"
+    },
+    {
+      "name": "core-eval-suite",
+      "duration_ms": 290.705,
+      "status": "pass"
+    },
+    {
+      "name": "deck-spec-validation",
+      "duration_ms": 219.58,
+      "status": "pass"
+    },
+    {
+      "name": "editable-pptx-render-1",
+      "duration_ms": 217.584,
+      "status": "pass"
+    },
+    {
+      "name": "editable-pptx-render-2",
+      "duration_ms": 215.394,
+      "status": "pass"
+    },
+    {
+      "name": "editable-pptx-render-3",
+      "duration_ms": 238.545,
+      "status": "pass"
+    },
+    {
+      "name": "five-slide-benchmark",
+      "duration_ms": 300.71,
+      "status": "pass"
+    }
+  ]
+}

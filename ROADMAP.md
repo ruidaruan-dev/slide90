@@ -10,25 +10,34 @@
 
 ## 0.2 — Reproducible slide specifications
 
-- Formal JSON schema for slide briefs and blocks.
-- Deterministic SVG renderer for the two canonical layouts.
-- English and Chinese example gallery.
-- Automated typography and overflow checks.
-- Reproducible benchmark harness and public fixtures.
+- [x] Formal JSON schema for slide briefs and blocks.
+- [x] Unified `slide90 validate` and `slide90 render` CLI.
+- [x] Editable PPTX renderer for the two canonical layouts.
+- [x] Public end-to-end fixture from raw source to PPTX and PNG preview.
+- [x] Automated schema, rendering, and overflow checks.
+- [x] Reproducible five-slide benchmark harness with raw results.
+- [x] Ten-minute delivery SLA gate with repeated-render stability checks.
+- [ ] Chinese deck-spec and rendered example gallery.
 
-## 0.3 — Deck-level storylining
+## 0.3 — Usable 80-point generation loop
 
-- Ghost-deck and action-title workflow.
-- Executive summary and decision-log patterns.
-- Multi-slide narrative consistency checks.
-- Board update, project review, transformation, and role-fit starter packs.
+- [x] Preserve-user-structure and propose-lightly input modes.
+- [x] Whole-deck, single-slide, and targeted replacement commands.
+- [x] Six high-frequency editable management layouts.
+- [x] Chinese six-slide acceptance fixture and CJK font declaration.
+- [x] Multi-slide stability and locked-page checks under a 10-minute ceiling.
+- [x] Five project-reporting layouts: charter, health, milestone Gantt, RAID, and solution flow.
+- [x] Synthetic five-slide project fixture with a repeated-render 10-minute delivery gate.
+- [ ] Human-scored 80-point usability benchmark across ten synthetic Chinese decks.
+- [ ] Board update, transformation, and role-fit starter packs.
 
-## 0.4 — Editable PowerPoint adapters
+## 0.4 — Expanded PowerPoint adapters
 
-- Adapter interface for PPTX-capable runtimes.
+- Adapter interface for additional PPTX-capable runtimes.
 - Native table, chart, and shape contracts.
 - Template ingestion and brand-token overrides.
 - Visual regression tests for reference outputs.
+- Deterministic renderers for `diagnosis-tree` and `comparison-matrix`.
 
 ## 1.0 — Proven executive-report system
 

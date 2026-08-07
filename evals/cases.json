@@ -1,58 +1,471 @@
-[
-  {
-    "id": "quarterly-performance",
-    "prompt": "Turn a quarterly update with five KPIs and three achievements into one executive slide.",
-    "expected_layout": "performance-dashboard",
-    "must_include": ["conclusion-led title", "metric ribbon", "management implication"],
-    "must_not_include": ["generic title", "decorative icons", "invented metrics"]
-  },
-  {
-    "id": "role-fit",
-    "prompt": "Show how four role requirements have been proven through internal projects.",
-    "expected_layout": "evidence-matrix",
-    "must_include": ["four claims", "direct evidence", "proof band"],
-    "must_not_include": ["paragraph cards", "unsupported adjectives"]
-  },
-  {
-    "id": "root-cause",
-    "prompt": "Explain why delivery speed declined and what leadership should change.",
-    "expected_layout": "diagnosis-tree",
-    "must_include": ["observed result", "root causes", "evidence", "implication"],
-    "must_not_include": ["symptoms presented as causes"]
-  },
-  {
-    "id": "six-month-roadmap",
-    "prompt": "Create a July-to-December delivery plan with stage gates.",
-    "expected_layout": "roadmap",
-    "must_include": ["timing", "deliverables", "decision gates"],
-    "must_not_include": ["small explanatory footnotes"]
-  },
-  {
-    "id": "operating-model",
-    "prompt": "Design a closed-loop organization from business demand to operations and evaluation.",
-    "expected_layout": "capability-loop",
-    "must_include": ["five or six roles", "responsibilities", "feedback loop"],
-    "must_not_include": ["ecosystem without handoffs"]
-  },
-  {
-    "id": "project-portfolio",
-    "prompt": "Show eight initiatives, their timing, value, status, and decision needed.",
-    "expected_layout": "portfolio-table",
-    "must_include": ["merged workstreams", "status", "value/result", "decision"],
-    "must_not_include": ["paragraph descriptions"]
-  },
-  {
-    "id": "option-choice",
-    "prompt": "Compare three implementation options across cost, speed, control, and risk.",
-    "expected_layout": "comparison-matrix",
-    "must_include": ["decision criteria", "recommended option", "evidence"],
-    "must_not_include": ["unexplained checkmarks"]
-  },
-  {
-    "id": "approval-page",
-    "prompt": "Ask leadership to approve a budget and owner for the recommended plan.",
-    "expected_layout": "decision-page",
-    "must_include": ["recommendation in title", "three reasons", "explicit ask"],
-    "must_not_include": ["topic-only title"]
-  }
-]
+{
+  "version": "1.0",
+  "suite": "slide90-management-reporting-core",
+  "description": "Twenty-four wholly fictional management-reporting cases. Names, figures, systems, and events are invented solely for public testing.",
+  "cases": [
+    {
+      "id": "case-001",
+      "category": "performance-dashboard",
+      "prompt": "Fictional case. A sample retailer reports quarterly revenue of $42 million, up 6%; gross margin is 28%, down 1 point; 12 stores opened; on-time delivery reached 95%. Growth continued, but margin recovery is the next priority.",
+      "expected_layout": "performance-dashboard",
+      "expected_title_intent": "Growth continued, but margin recovery is the next priority",
+      "required_facts": [
+        "$42 million",
+        "up 6%",
+        "gross margin is 28%",
+        "down 1 point",
+        "12 stores opened",
+        "on-time delivery reached 95%"
+      ],
+      "must_not_invent": [
+        "market rank",
+        "profit amount",
+        "budget attainment"
+      ]
+    },
+    {
+      "id": "case-002",
+      "category": "performance-dashboard",
+      "prompt": "Fictional case. A learning portal logged 4,800 sessions, 620 monthly users, 68% course completion, an 89% satisfaction score, and 140 overdue assignments. Adoption is healthy, while completion discipline needs attention.",
+      "expected_layout": "performance-dashboard",
+      "expected_title_intent": "Adoption is healthy, while completion discipline needs attention",
+      "required_facts": [
+        "4,800 sessions",
+        "620 monthly users",
+        "68% course completion",
+        "89% satisfaction",
+        "140 overdue assignments"
+      ],
+      "must_not_invent": [
+        "revenue impact",
+        "headcount reduction",
+        "industry benchmark"
+      ]
+    },
+    {
+      "id": "case-003",
+      "category": "performance-dashboard",
+      "prompt": "Fictional case. A support desk handled 7,200 tickets; first response improved from 5 hours to 3 hours; first-contact resolution rose from 70% to 79%; satisfaction stayed at 92%; 110 tickets remain overdue.",
+      "expected_layout": "performance-dashboard",
+      "expected_title_intent": "Support efficiency improved, but overdue tickets remain a risk",
+      "required_facts": [
+        "7,200 tickets",
+        "5 hours to 3 hours",
+        "70% to 79%",
+        "92%",
+        "110 tickets"
+      ],
+      "must_not_invent": [
+        "staff reduction",
+        "cost saving",
+        "complaint decline"
+      ]
+    },
+    {
+      "id": "case-004",
+      "category": "evidence-matrix",
+      "prompt": "Fictional case. Assess a program lead against four requirements: planning is proven by six delivered initiatives; governance by an approved control handbook; collaboration by three cross-team launches; team development by mentoring two new leads.",
+      "expected_layout": "evidence-matrix",
+      "expected_title_intent": "All four leadership requirements have direct delivery evidence",
+      "required_facts": [
+        "six delivered initiatives",
+        "approved control handbook",
+        "three cross-team launches",
+        "mentoring two new leads"
+      ],
+      "must_not_invent": [
+        "years of service",
+        "external awards",
+        "employee rating"
+      ]
+    },
+    {
+      "id": "case-005",
+      "category": "evidence-matrix",
+      "prompt": "Fictional case. Recommend Vendor Z using direct evidence: four comparable deployments, support for standard sign-on and APIs, an independent security audit, weekday onsite coverage, and round-the-clock remote support.",
+      "expected_layout": "evidence-matrix",
+      "expected_title_intent": "Vendor Z has direct evidence across delivery, integration, security, and support",
+      "required_facts": [
+        "four comparable deployments",
+        "standard sign-on and APIs",
+        "independent security audit",
+        "weekday onsite coverage",
+        "round-the-clock remote support"
+      ],
+      "must_not_invent": [
+        "lowest price",
+        "market share",
+        "customer score"
+      ]
+    },
+    {
+      "id": "case-006",
+      "category": "evidence-matrix",
+      "prompt": "Fictional case. A data program is ready to start: five domain owners approved the scope; customer and product records are included; nine interfaces are inventoried; three internal and two external contributors are assigned.",
+      "expected_layout": "evidence-matrix",
+      "expected_title_intent": "The data program meets all four start conditions",
+      "required_facts": [
+        "five domain owners",
+        "customer and product records",
+        "nine interfaces",
+        "three internal",
+        "two external"
+      ],
+      "must_not_invent": [
+        "program budget",
+        "launch date",
+        "quality improvement"
+      ]
+    },
+    {
+      "id": "case-007",
+      "category": "diagnosis-tree",
+      "prompt": "Fictional case. Average delivery time increased from 3 weeks to 6 weeks. Access approval consumes 9 days, teams rebuild the same connector, and five specialists carry 20 active requests. Leaders must simplify access, standardize integration, and cap work in progress.",
+      "expected_layout": "diagnosis-tree",
+      "expected_title_intent": "Approval delay, repeated integration, and excess work in progress doubled delivery time",
+      "required_facts": [
+        "3 weeks to 6 weeks",
+        "9 days",
+        "same connector",
+        "five specialists",
+        "20 active requests"
+      ],
+      "must_not_invent": [
+        "skill shortage",
+        "vendor delay",
+        "budget cut"
+      ]
+    },
+    {
+      "id": "case-008",
+      "category": "diagnosis-tree",
+      "prompt": "Fictional case. Forecast accuracy fell from 84% to 71%. One quarter of promotion plans arrived late, key accounts used offline sheets, and the model was not refreshed for two cycles. Fix data entry, unify the forecast channel, and restore scheduled refreshes.",
+      "expected_layout": "diagnosis-tree",
+      "expected_title_intent": "Late inputs and missed refreshes reduced forecast accuracy",
+      "required_facts": [
+        "84% to 71%",
+        "One quarter",
+        "offline sheets",
+        "two cycles",
+        "scheduled refreshes"
+      ],
+      "must_not_invent": [
+        "market decline",
+        "staff turnover",
+        "algorithm defect"
+      ]
+    },
+    {
+      "id": "case-009",
+      "category": "diagnosis-tree",
+      "prompt": "Fictional case. Inventory days rose from 38 to 52. Slow-moving items caused half the increase, order-batch settings were not reviewed for 18 months, and sales and supply teams aligned forecasts only monthly.",
+      "expected_layout": "diagnosis-tree",
+      "expected_title_intent": "Slow items, stale parameters, and infrequent alignment increased inventory",
+      "required_facts": [
+        "38 to 52",
+        "half the increase",
+        "18 months",
+        "only monthly"
+      ],
+      "must_not_invent": [
+        "supplier price",
+        "warehouse capacity",
+        "cancelled orders"
+      ]
+    },
+    {
+      "id": "case-010",
+      "category": "roadmap",
+      "prompt": "Fictional case. A July-to-December adoption plan starts with 20 pilot users in July, expands to 60 users from August to October, targets 65% weekly activity, validates four use cases in November, and makes a scale decision in December.",
+      "expected_layout": "roadmap",
+      "expected_title_intent": "A staged pilot will support a December scale decision",
+      "required_facts": [
+        "20 pilot users",
+        "60 users",
+        "65% weekly activity",
+        "four use cases",
+        "December"
+      ],
+      "must_not_invent": [
+        "company-wide rollout",
+        "purchase price",
+        "hours saved"
+      ]
+    },
+    {
+      "id": "case-011",
+      "category": "roadmap",
+      "prompt": "Fictional case. A six-month data-hub plan catalogs 25 core tables in Q3, launches one access request in October, connects sales and logistics data in November, and uses a December security review as the gate for wider access.",
+      "expected_layout": "roadmap",
+      "expected_title_intent": "Build catalog and access controls before wider data access",
+      "required_facts": [
+        "25 core tables",
+        "Q3",
+        "October",
+        "sales and logistics",
+        "December security review"
+      ],
+      "must_not_invent": [
+        "all enterprise data",
+        "real-time feeds",
+        "program budget"
+      ]
+    },
+    {
+      "id": "case-012",
+      "category": "roadmap",
+      "prompt": "Fictional case. A product plan completes user validation in August, freezes scope in September, runs a small pilot in October, holds a quality review in November, and targets launch in December only if the review passes.",
+      "expected_layout": "roadmap",
+      "expected_title_intent": "The November quality review is the launch gate",
+      "required_facts": [
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "must_not_invent": [
+        "sales target",
+        "development budget",
+        "launch market"
+      ]
+    },
+    {
+      "id": "case-013",
+      "category": "capability-loop",
+      "prompt": "Fictional case. Build a service-production loop with business champions, knowledge stewards, data curators, solution designers, delivery engineers, and service evaluators. Show handoffs from demand and knowledge to design, delivery, measurement, and feedback.",
+      "expected_layout": "capability-loop",
+      "expected_title_intent": "Six roles connect demand, delivery, measurement, and feedback",
+      "required_facts": [
+        "business champions",
+        "knowledge stewards",
+        "data curators",
+        "solution designers",
+        "delivery engineers",
+        "service evaluators"
+      ],
+      "must_not_invent": [
+        "new department",
+        "role headcount",
+        "outsourcing budget"
+      ]
+    },
+    {
+      "id": "case-014",
+      "category": "capability-loop",
+      "prompt": "Fictional case. A demand loop assigns request validation to key users, value assessment to business partners, solution design to product owners, delivery to engineering, adoption tracking to operations, and continue-adjust-stop decisions to a quarterly portfolio board.",
+      "expected_layout": "capability-loop",
+      "expected_title_intent": "Validation and quarterly portfolio decisions create a value loop",
+      "required_facts": [
+        "key users",
+        "business partners",
+        "product owners",
+        "engineering",
+        "operations",
+        "quarterly portfolio board"
+      ],
+      "must_not_invent": [
+        "approval layers",
+        "team size",
+        "fixed lead time"
+      ]
+    },
+    {
+      "id": "case-015",
+      "category": "capability-loop",
+      "prompt": "Fictional case. A knowledge loop has experts approve content, stewards manage versions, a platform team control access, an application team package use cases, operators return low-rated answers, and a quarterly review retires obsolete content.",
+      "expected_layout": "capability-loop",
+      "expected_title_intent": "Clear ownership and feedback keep knowledge usable",
+      "required_facts": [
+        "experts approve content",
+        "stewards manage versions",
+        "platform team",
+        "application team",
+        "low-rated answers",
+        "quarterly review"
+      ],
+      "must_not_invent": [
+        "repository size",
+        "accuracy target",
+        "vendor role"
+      ]
+    },
+    {
+      "id": "case-016",
+      "category": "portfolio-table",
+      "prompt": "Fictional case. A Q3-Q4 portfolio includes pricing analysis due July 30, catalog cleanup due early August, research exploration due late August, an order assistant running August to December, and a complaint map due September. Show timing, status, value, and decision.",
+      "expected_layout": "portfolio-table",
+      "expected_title_intent": "Five initiatives follow clear delivery milestones",
+      "required_facts": [
+        "pricing analysis due July 30",
+        "catalog cleanup due early August",
+        "research exploration due late August",
+        "order assistant running August to December",
+        "complaint map due September"
+      ],
+      "must_not_invent": [
+        "project benefit",
+        "completion status",
+        "owner name"
+      ]
+    },
+    {
+      "id": "case-017",
+      "category": "portfolio-table",
+      "prompt": "Fictional case. A sample team owns two small compute nodes, one internal model service, one external model gateway, one test workstation, a model registry, and two generic workflow tools named FlowOne and FlowTwo. Present asset type, purpose, and status.",
+      "expected_layout": "portfolio-table",
+      "expected_title_intent": "Local, external, and test assets form a layered portfolio",
+      "required_facts": [
+        "two small compute nodes",
+        "one internal model service",
+        "one external model gateway",
+        "one test workstation",
+        "model registry",
+        "FlowOne and FlowTwo"
+      ],
+      "must_not_invent": [
+        "purchase price",
+        "model size",
+        "utilization rate"
+      ]
+    },
+    {
+      "id": "case-018",
+      "category": "portfolio-table",
+      "prompt": "Fictional case. Review six sample programs: customer portal, demand planning, data quality, service assistant, equipment maintenance, and invoice automation. Each row needs owner, stage, budget band, expected value, and one pending decision.",
+      "expected_layout": "portfolio-table",
+      "expected_title_intent": "Six programs require consistent portfolio management",
+      "required_facts": [
+        "customer portal",
+        "demand planning",
+        "data quality",
+        "service assistant",
+        "equipment maintenance",
+        "invoice automation"
+      ],
+      "must_not_invent": [
+        "specific budget",
+        "specific owner",
+        "completion percentage"
+      ]
+    },
+    {
+      "id": "case-019",
+      "category": "comparison-matrix",
+      "prompt": "Fictional case. Compare local hosting, external hosting, and a hybrid. Local gives the most control but scales slowly; external launches fastest but restricts sensitive data; hybrid balances control and elasticity but adds integration work. Recommend hybrid for tiered workloads.",
+      "expected_layout": "comparison-matrix",
+      "expected_title_intent": "Hybrid hosting best balances control and elasticity",
+      "required_facts": [
+        "most control",
+        "scales slowly",
+        "launches fastest",
+        "restricts sensitive data",
+        "hybrid",
+        "integration work"
+      ],
+      "must_not_invent": [
+        "specific cost",
+        "provider name",
+        "performance ratio"
+      ]
+    },
+    {
+      "id": "case-020",
+      "category": "comparison-matrix",
+      "prompt": "Fictional case. Compare three imaginary workflow tools. FlowOne is strong for search and includes support; FlowTwo is flexible and open source but needs internal operations; FlowThree has complete enterprise controls but costs more. Recommend a use-case-based combination.",
+      "expected_layout": "comparison-matrix",
+      "expected_title_intent": "The three fictional tools are complementary",
+      "required_facts": [
+        "FlowOne",
+        "includes support",
+        "FlowTwo",
+        "open source",
+        "FlowThree",
+        "costs more"
+      ],
+      "must_not_invent": [
+        "license amount",
+        "user count",
+        "performance rank"
+      ]
+    },
+    {
+      "id": "case-021",
+      "category": "comparison-matrix",
+      "prompt": "Fictional case. Compare delivery capacity models. All-internal retains knowledge but scales slowly; all-external scales quickly but risks losing core capability; an internal core with external flex preserves architecture ownership and handles peaks. Recommend the third model.",
+      "expected_layout": "comparison-matrix",
+      "expected_title_intent": "An internal core with external flex balances capability and peaks",
+      "required_facts": [
+        "All-internal",
+        "scales slowly",
+        "all-external",
+        "losing core capability",
+        "internal core with external flex",
+        "third model"
+      ],
+      "must_not_invent": [
+        "contractor count",
+        "cost reduction",
+        "supplier list"
+      ]
+    },
+    {
+      "id": "case-022",
+      "category": "decision-page",
+      "prompt": "Fictional case. Request approval to expand a tool pilot from 20 to 75 users. In the first group, 85% completed one assisted output, weekly activity reached 72%, and five reusable playbooks were created. Approve account capacity and participating teams.",
+      "expected_layout": "decision-page",
+      "expected_title_intent": "Approve expansion because adoption and reuse cleared the pilot gate",
+      "required_facts": [
+        "20 to 75 users",
+        "85%",
+        "weekly activity reached 72%",
+        "five reusable playbooks",
+        "account capacity",
+        "participating teams"
+      ],
+      "must_not_invent": [
+        "purchase price",
+        "efficiency gain",
+        "company-wide date"
+      ]
+    },
+    {
+      "id": "case-023",
+      "category": "decision-page",
+      "prompt": "Fictional case. Request approval for a controlled data pilot using least privilege, masked sensitive fields, 120-day audit logs, and owner-approved access. Decide whether two sample business units may begin the pilot.",
+      "expected_layout": "decision-page",
+      "expected_title_intent": "Approve two-unit pilot under four explicit controls",
+      "required_facts": [
+        "least privilege",
+        "masked sensitive fields",
+        "120-day audit logs",
+        "owner-approved access",
+        "two sample business units"
+      ],
+      "must_not_invent": [
+        "compliance certificate",
+        "incident rate",
+        "pilot budget"
+      ]
+    },
+    {
+      "id": "case-024",
+      "category": "decision-page",
+      "prompt": "Fictional case. Request closure of a sample reporting project. Two pilots produced only four weekly users, annual maintenance is $30,000, and capability overlap with an existing tool exceeds 75%. Move two implementers to customer analytics and approve closure.",
+      "expected_layout": "decision-page",
+      "expected_title_intent": "Close the low-use project and reassign two implementers",
+      "required_facts": [
+        "four weekly users",
+        "$30,000",
+        "exceeds 75%",
+        "two implementers",
+        "approve closure"
+      ],
+      "must_not_invent": [
+        "sunk cost",
+        "vendor breach",
+        "analytics benefit"
+      ]
+    }
+  ]
+}

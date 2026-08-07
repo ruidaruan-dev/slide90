@@ -1,0 +1,15 @@
+{
+  "number": 5,
+  "section": "05 / 交付组合（更新）",
+  "title": "五项关键交付集中在治理与扩展主线，年度决策前完成价值复盘",
+  "layout": "portfolio-table",
+  "blocks": [
+    {"id": "access-rule", "title": "权限与脱敏规则", "owner": "平台与安全", "timing": "10月上旬", "status": "前置任务", "body": "完成敏感字段规则", "evidence": "支持后续账号扩展", "accent": "orange"},
+    {"id": "playbook", "title": "场景模板包", "owner": "AI应用组", "timing": "10月中旬", "status": "建设中", "body": "固化四类场景", "evidence": "减少重复设计", "accent": "blue"},
+    {"id": "cohort-one", "title": "分批扩展", "owner": "运营负责人", "timing": "10月至11月", "status": "待启动", "body": "扩展至60名用户", "evidence": "保持65%周活跃率", "accent": "green"},
+    {"id": "value-review", "title": "场景价值复盘", "owner": "业务与AI组", "timing": "12月上旬", "status": "待评估", "body": "复核时间节省", "evidence": "形成量化价值清单", "accent": "purple"},
+    {"id": "annual-decision", "title": "年度扩量建议", "owner": "项目负责人", "timing": "12月下旬", "status": "决策点", "body": "评估下一年度范围", "evidence": "提交预算与人员建议", "accent": "orange"}
+  ],
+  "conclusion": "更新后的组合减少并行批次，以治理完成和价值复盘作为年度扩量决策依据。",
+  "source_refs": ["完全虚构的公开演示数据，不代表任何真实企业"]
+}
