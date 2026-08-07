@@ -1,10 +1,21 @@
-import { COLORS, FONT_FACE, accent, box, px } from "./theme.mjs";
+import { COLORS, FONT_FACE, FONT_FACE_CJK, accent, box, px } from "./theme.mjs";
+
+
+function textValue(text) {
+  if (Array.isArray(text)) return text.map((part) => part?.text || "").join("");
+  return String(text || "");
+}
+
+
+function fontFor(text) {
+  return /[\u3400-\u9fff\uf900-\ufaff]/u.test(textValue(text)) ? FONT_FACE_CJK : FONT_FACE;
+}
 
 
 export function addText(slide, text, position, options = {}) {
   slide.addText(text, {
     ...position,
-    fontFace: FONT_FACE,
+    fontFace: fontFor(text),
     color: COLORS.ink,
     margin: 0,
     breakLine: false,

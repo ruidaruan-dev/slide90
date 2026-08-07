@@ -1,6 +1,17 @@
 # Fast Loop
 
-Use this protocol for decks of 2–12 slides. Separate judgment from execution: let the agent decide the storyline and layout IDs once; let deterministic coordinates and validation handle repeated production work.
+Use this protocol for decks of 2–12 slides. The target is a fast, stable, editable 80-point draft—not autonomous perfection. Preserve an existing user structure; propose a lightweight structure only when one is missing. Separate judgment from execution: decide the page map and layout IDs once, then let deterministic coordinates and validation handle production.
+
+## Lightweight input contract
+
+Capture only what materially changes the output:
+
+1. audience;
+2. objective or decision;
+3. `preserve-user-structure` or `propose-lightly`;
+4. must-keep facts.
+
+Do not ask the user to choose layout IDs. If the source already has a usable outline, preserve it and proceed. If it does not, ask at most three questions, present one compact page map, and continue after confirmation.
 
 ## Ten-minute delivery budget
 
@@ -27,6 +38,12 @@ Create one JSON object before drawing shapes:
   "deck_title": "Q3 management update",
   "audience": "executive committee",
   "decision": "Approve the Q4 scale-up plan",
+  "brief": {
+    "objective": "Preserve the supplied results-to-decision sequence",
+    "structure_mode": "preserve-user-structure",
+    "structure_confirmed": true,
+    "must_keep_facts": ["7 departments", "20+ validated demands"]
+  },
   "slides": [
     {
       "number": 1,
@@ -91,6 +108,17 @@ Create a repair list in this form:
 ```
 
 Lock all slides not present in the repair list. Rerender only the affected slides when the platform permits it. Use at most two repair passes by default.
+
+## Whole-deck and single-slide commands
+
+```bash
+node bin/slide90.mjs render deck-spec.json --output deck.pptx
+node bin/slide90.mjs render-slide deck-spec.json --slide 3 --output slide-3.pptx
+node bin/slide90.mjs replace-slide deck-spec.json --slide 5 --with replacement.json \
+  --output updated.pptx --spec-output updated.json
+```
+
+`replace-slide` rerenders deterministically from the updated specification. Unchanged page specifications remain byte-stable at the slide XML level.
 
 ## Repair order
 

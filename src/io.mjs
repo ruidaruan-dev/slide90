@@ -12,6 +12,14 @@ export async function readJson(filePath) {
 }
 
 
+export async function writeJson(filePath, value) {
+  const absolute = path.resolve(filePath);
+  await ensureParent(absolute);
+  await fs.writeFile(absolute, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  return absolute;
+}
+
+
 export async function ensureParent(filePath) {
   await fs.mkdir(path.dirname(path.resolve(filePath)), { recursive: true });
 }

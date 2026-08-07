@@ -11,6 +11,7 @@
     "deck_title": {"type": "string", "minLength": 1, "maxLength": 120},
     "audience": {"type": "string", "minLength": 1, "maxLength": 120},
     "decision": {"type": "string", "maxLength": 240},
+    "brief": {"$ref": "#/$defs/brief"},
     "language": {"type": "string", "default": "en-US", "maxLength": 16},
     "theme": {"type": "string", "default": "slide90", "maxLength": 40},
     "slides": {
@@ -21,6 +22,22 @@
     }
   },
   "$defs": {
+    "brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objective", "structure_mode"],
+      "properties": {
+        "objective": {"type": "string", "minLength": 1, "maxLength": 240},
+        "structure_mode": {"enum": ["preserve-user-structure", "propose-lightly"]},
+        "structure_confirmed": {"type": "boolean", "default": false},
+        "must_keep_facts": {
+          "type": "array",
+          "maxItems": 40,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1, "maxLength": 160}
+        }
+      }
+    },
     "metric": {
       "type": "object",
       "additionalProperties": false,
@@ -48,6 +65,9 @@
           "items": {"type": "string", "maxLength": 44}
         },
         "role": {"type": "string", "maxLength": 48},
+        "owner": {"type": "string", "maxLength": 48},
+        "timing": {"type": "string", "maxLength": 48},
+        "status": {"type": "string", "maxLength": 32},
         "group": {"enum": ["business", "internal", "external"]},
         "accent": {"enum": ["blue", "green", "purple", "orange", "navy"]}
       }
@@ -106,6 +126,59 @@
                     {"required": ["body", "evidence"]}
                   ]
                 }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "performance-dashboard"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion", "metrics"],
+            "properties": {
+              "metrics": {"minItems": 2, "maxItems": 5},
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 4,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "evidence"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "roadmap"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion"],
+            "properties": {
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 3,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "timing"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "portfolio-table"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion"],
+            "properties": {
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 8,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "owner", "timing", "status"]}]}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"layout": {"const": "decision-page"}}, "required": ["layout"]},
+          "then": {
+            "required": ["conclusion"],
+            "properties": {
+              "blocks": {
+                "minItems": 2,
+                "maxItems": 3,
+                "items": {"allOf": [{"$ref": "#/$defs/block"}, {"required": ["body", "evidence"]}]}
               }
             }
           }

@@ -34,6 +34,15 @@ async function validator() {
 function customErrors(spec) {
   const errors = [];
   const numbers = new Set();
+  const slideText = JSON.stringify(spec.slides || []);
+  if (spec.brief?.structure_mode === "preserve-user-structure" && spec.brief.structure_confirmed !== true) {
+    errors.push({ instancePath: "/brief/structure_confirmed", keyword: "structure-confirmation", message: "must be true when preserving the user's structure" });
+  }
+  for (const [index, fact] of (spec.brief?.must_keep_facts || []).entries()) {
+    if (!slideText.includes(fact)) {
+      errors.push({ instancePath: `/brief/must_keep_facts/${index}`, keyword: "must-keep-fact", message: "must appear verbatim in slide content" });
+    }
+  }
   for (const [index, slide] of (spec.slides || []).entries()) {
     if (numbers.has(slide.number)) {
       errors.push({ instancePath: `/slides/${index}/number`, keyword: "duplicate-slide-number", message: "must be unique" });

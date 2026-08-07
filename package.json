@@ -1,7 +1,7 @@
 {
   "name": "slide90",
-  "version": "0.2.0-alpha.1",
-  "description": "Decision-ready executive slides from a validated deck specification.",
+  "version": "0.3.0-alpha.1",
+  "description": "Fast, stable 80-point executive drafts from a validated deck specification.",
   "type": "module",
   "bin": {
     "slide90": "bin/slide90.mjs"
@@ -13,6 +13,7 @@
     "eval:baseline": "node evals/run-baseline.mjs && node evals/score.mjs evals/results/baseline-candidates.json evals/results/baseline-report.json",
     "benchmark": "node benchmarks/run.mjs",
     "verify:p0": "node scripts/verify_p0.mjs",
+    "verify:p1": "node scripts/verify_p1.mjs",
     "test": "node --test tests-node/*.test.mjs"
   },
   "engines": {

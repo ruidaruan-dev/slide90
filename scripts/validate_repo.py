@@ -44,12 +44,20 @@ REQUIRED = (
     "src/render/index.mjs",
     "src/render/layouts/evidence-matrix.mjs",
     "src/render/layouts/capability-loop.mjs",
+    "src/render/layouts/performance-dashboard.mjs",
+    "src/render/layouts/roadmap.mjs",
+    "src/render/layouts/portfolio-table.mjs",
+    "src/render/layouts/decision-page.mjs",
     "examples/end-to-end/source.md",
     "examples/end-to-end/deck-spec.json",
     "benchmarks/cases/five-slide.json",
     "benchmarks/run.mjs",
     "scripts/verify_p0.mjs",
     "benchmarks/results/p0-verification-latest.json",
+    "examples/p1/deck-spec.zh-CN.json",
+    "examples/p1/replacement-slide-5.zh-CN.json",
+    "scripts/verify_p1.mjs",
+    "benchmarks/results/p1-verification-latest.json",
 )
 SCAN_DIRS = ("references", "examples", "evals", "assets", "schema", "bin", "src", "benchmarks", "tests-node")
 PUBLIC_TEXT_FILES = ("README.md", "README.zh-CN.md", "SKILL.md", "CONTRIBUTING.md", "ROADMAP.md", "BENCHMARK.md")
@@ -174,7 +182,7 @@ def validate_p0_contract(errors: list[str]) -> None:
         fail(errors, "package.json must expose the slide90 CLI")
     schema = json.loads((ROOT / "schema/deck-spec.schema.json").read_text(encoding="utf-8"))
     layouts = schema["$defs"]["slide"]["properties"]["layout"]["enum"]
-    for layout in ("evidence-matrix", "capability-loop"):
+    for layout in ("performance-dashboard", "evidence-matrix", "roadmap", "capability-loop", "portfolio-table", "decision-page"):
         if layout not in layouts:
             fail(errors, f"deck schema is missing P0 layout: {layout}")
 

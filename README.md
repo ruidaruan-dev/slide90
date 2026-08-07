@@ -1,18 +1,18 @@
 # Slide90
 
-**Spend less time formatting. Make decisions visible.**
+**A usable 80-point deck in minutes—not an autonomous attempt at 100.**
 
-Slide90 is an open-source Agent Skill that turns raw business material into compact, decision-ready executive slides. It plans the full deck once, renders in batch, validates structure before drawing, locks passing slides, and repairs only failed elements.
+Slide90 is an open-source Agent Skill that preserves a user's reporting structure and turns business material into a fast, stable, editable executive draft. It removes layout work, supports whole-deck and single-slide generation, locks passing pages, and leaves final polish to targeted edits.
 
-**P0 is now executable:** a formal deck-spec schema, one CLI, and a first-party renderer produce editable PowerPoint for the two flagship layouts: `evidence-matrix` and `capability-loop`.
+**P1 is executable:** the renderer now supports six high-frequency management layouts, a lightweight brief contract, whole-deck generation, single-slide output, and targeted page replacement.
 
-In our controlled five-slide runtime benchmark, the Fast Loop reduced wall time by **79.4%** while producing pixel-identical output. The name is the ambition; the benchmark is the evidence.
+In the checked-in controlled five-slide benchmark, the Fast Loop reduced renderer wall time by **58%**. The name is the ambition; the benchmark is the evidence.
 
 [中文说明](README.zh-CN.md) · [Benchmark](BENCHMARK.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
 ![Slide90 Fast Loop demo](assets/slide90-demo.gif)
 
-## P0: spec to editable PowerPoint
+## P1: preserve the story, remove the formatting work
 
 ```mermaid
 flowchart LR
@@ -24,22 +24,26 @@ flowchart LR
 
 ![P0 editable PowerPoint preview](examples/end-to-end/output/preview.png)
 
-Run the public fixture:
+Run the six-slide synthetic Chinese acceptance fixture:
 
 ```bash
 npm ci
-node bin/slide90.mjs validate examples/end-to-end/deck-spec.json
-node bin/slide90.mjs render examples/end-to-end/deck-spec.json \
-  --output examples/end-to-end/output/slide90-p0-demo.pptx
+node bin/slide90.mjs validate examples/p1/deck-spec.zh-CN.json
+node bin/slide90.mjs render examples/p1/deck-spec.zh-CN.json --output deck.pptx
+node bin/slide90.mjs render-slide examples/p1/deck-spec.zh-CN.json --slide 3 --output slide-3.pptx
+node bin/slide90.mjs replace-slide examples/p1/deck-spec.zh-CN.json --slide 5 \
+  --with examples/p1/replacement-slide-5.zh-CN.json --output updated.pptx
 ```
 
-Run the P0 delivery gate before handing off a deck:
+Run the P1 delivery gate:
 
 ```bash
-npm run verify:p0
+npm run verify:p1
 ```
 
-The gate runs automated tests, validates the 24-case management-reporting eval suite and deck spec, generates the editable deck three times, compares slide-level semantic fingerprints, verifies native shapes/text and source notes, runs the five-slide benchmark, and fails if the complete check exceeds 600 seconds. The latest checked-in result is [`benchmarks/results/p0-verification-latest.json`](benchmarks/results/p0-verification-latest.json).
+The latest checked P1 gate passes in **1.089 seconds**. It validates the six-layout fixture, renders the full deck three times, verifies semantic stability, checks editable shapes and Chinese font declarations, renders one page independently, replaces slide 5, and proves that the other five slide XML files remain unchanged. It fails above 600 seconds. See [`benchmarks/results/p1-verification-latest.json`](benchmarks/results/p1-verification-latest.json). Model inference, queueing, network transfer, and human approval are outside this renderer measurement.
+
+The project now proves a stable production path; it does **not yet claim** that every real-world deck reaches the 80-point usability bar. A ten-deck human-scored Chinese benchmark is the next evidence milestone.
 
 The core suite at [`evals/cases.json`](evals/cases.json) contains three synthetic prompts for each of the eight management layouts. Every case defines its expected layout, title intent, required facts, and facts that must not be invented.
 
@@ -59,7 +63,9 @@ The examples use synthetic data and contain no proprietary company information.
 
 - **Decision first** — action titles answer the management question instead of naming a topic.
 - **Evidence over adjectives** — claims are tied to metrics, delivery proof, mechanisms, or ownership.
+- **Preserve the user's story** — existing reporting structures stay intact; missing structures receive only lightweight guidance.
 - **Plan once, render once** — one deck specification replaces repeated slide-by-slide reasoning.
+- **Whole deck or one page** — batch-generate the draft or replace one page without changing the others.
 - **Targeted repair** — passing slides stay locked; only failed elements are regenerated.
 - **Tested layouts** — eight executive layouts use fixed content zones and machine-readable design tokens.
 - **No AI-slop styling** — strict grid, white canvas, restrained accents, readable type, and no decorative clutter.
@@ -114,6 +120,8 @@ evidence matrix. Do not invent evidence. Return an editable 16:9 slide.
 
 ## Eight management layouts
 
+Six layouts currently have deterministic editable renderers. `diagnosis-tree` and `comparison-matrix` remain routing specifications until their renderers land.
+
 | Management question | Layout ID |
 |---|---|
 | What has been achieved? | `performance-dashboard` |
@@ -151,6 +159,7 @@ npm test
 npm run eval:validate
 npm run eval:baseline
 npm run verify:p0
+npm run verify:p1
 npm run benchmark
 python scripts/validate_repo.py
 python -m unittest discover -s tests

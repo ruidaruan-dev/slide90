@@ -46,14 +46,17 @@ function addRoleCard(pptx, slide, block, zone) {
 }
 
 
-export function renderCapabilityLoop(pptx, slide, slideSpec) {
+export function renderCapabilityLoop(pptx, slide, slideSpec, language = "en-US") {
+  const labels = language.startsWith("zh")
+    ? { business: "业务侧人才网络", internal: "内部交付链", feedback: "反馈：采用度  ·  质量  ·  业务价值" }
+    : { business: "BUSINESS NETWORK", internal: "INTERNAL DELIVERY CHAIN", feedback: "Feedback: adoption  ·  quality  ·  business value" };
   addHeader(pptx, slide, slideSpec);
   addMetricRibbon(pptx, slide, slideSpec.metrics || [], [58, 180, 1164, 58]);
 
   addRect(pptx, slide, box([58, 258, 330, 302]), COLORS.paleOrange, null, 5);
   addRect(pptx, slide, box([404, 258, 818, 302]), COLORS.paleBlue, null, 5);
-  addText(slide, "BUSINESS NETWORK", box([76, 276, 290, 24]), { fontSize: 10, bold: true, color: COLORS.orange });
-  addText(slide, "INTERNAL DELIVERY CHAIN", box([424, 276, 760, 24]), { fontSize: 10, bold: true, color: COLORS.mutedBlue });
+  addText(slide, labels.business, box([76, 276, 290, 24]), { fontSize: 10, bold: true, color: COLORS.orange });
+  addText(slide, labels.internal, box([424, 276, 760, 24]), { fontSize: 10, bold: true, color: COLORS.mutedBlue });
 
   const positions = cardPositions(slideSpec.blocks);
   const ordered = slideSpec.blocks.map((block) => ({ block, zone: positions.get(block.id) }));
@@ -70,7 +73,7 @@ export function renderCapabilityLoop(pptx, slide, slideSpec) {
   addLine(pptx, slide, px(130), px(526), px(1050), 0, { color: COLORS.orange, width: 1.2, beginArrowType: "triangle" });
 
   ordered.forEach(({ block, zone }) => addRoleCard(pptx, slide, block, zone));
-  addText(slide, "Feedback: adoption  ·  quality  ·  business value", box([390, 528, 500, 22]), {
+  addText(slide, labels.feedback, box([390, 528, 500, 22]), {
     fontSize: 9.5,
     bold: true,
     color: COLORS.orange,

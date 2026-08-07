@@ -10,7 +10,7 @@ const CARD_ZONES = [
 ];
 
 
-function addEvidenceCard(pptx, slide, block, index, zone) {
+function addEvidenceCard(pptx, slide, block, index, zone, labels) {
   const [x, y, w, h] = zone;
   const token = accent(block.accent || ["blue", "green", "purple", "orange"][index % 4]);
   addRect(pptx, slide, box(zone), COLORS.white, COLORS.rule, 5);
@@ -30,7 +30,7 @@ function addEvidenceCard(pptx, slide, block, index, zone) {
   });
 
   addText(slide, [
-    { text: "REQUIREMENT  ", options: { bold: true, color: COLORS.faint } },
+    { text: `${labels.requirement}  `, options: { bold: true, color: COLORS.faint } },
     { text: block.body || "", options: { color: COLORS.gray } }
   ], box([x + 20, y + 43, w - 40, 30]), {
     fontSize: 11,
@@ -40,7 +40,7 @@ function addEvidenceCard(pptx, slide, block, index, zone) {
 
   addLine(pptx, slide, px(x + 20), px(y + 78), px(w - 40), 0, { color: COLORS.rule, width: 0.7 });
   addText(slide, [
-    { text: "DIRECT EVIDENCE  ", options: { bold: true, color: token.strong } },
+    { text: `${labels.evidence}  `, options: { bold: true, color: token.strong } },
     { text: block.evidence || "", options: { color: COLORS.ink, bold: true } }
   ], box([x + 20, y + 84, w - 40, 30]), {
     fontSize: 11,
@@ -59,10 +59,13 @@ function addEvidenceCard(pptx, slide, block, index, zone) {
 }
 
 
-export function renderEvidenceMatrix(pptx, slide, slideSpec) {
+export function renderEvidenceMatrix(pptx, slide, slideSpec, language = "en-US") {
+  const labels = language.startsWith("zh")
+    ? { requirement: "岗位要求", evidence: "直接证据" }
+    : { requirement: "REQUIREMENT", evidence: "DIRECT EVIDENCE" };
   addHeader(pptx, slide, slideSpec);
   addMetricRibbon(pptx, slide, slideSpec.metrics || []);
-  slideSpec.blocks.forEach((block, index) => addEvidenceCard(pptx, slide, block, index, CARD_ZONES[index]));
+  slideSpec.blocks.forEach((block, index) => addEvidenceCard(pptx, slide, block, index, CARD_ZONES[index], labels));
   addConclusion(pptx, slide, slideSpec.conclusion);
   addSourceNotes(slide, slideSpec.source_refs || []);
 }

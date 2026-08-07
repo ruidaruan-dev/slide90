@@ -19,12 +19,15 @@
 - [x] Ten-minute delivery SLA gate with repeated-render stability checks.
 - [ ] Chinese deck-spec and rendered example gallery.
 
-## 0.3 — Deck-level storylining
+## 0.3 — Usable 80-point generation loop
 
-- Ghost-deck and action-title workflow.
-- Executive summary and decision-log patterns.
-- Multi-slide narrative consistency checks.
-- Board update, project review, transformation, and role-fit starter packs.
+- [x] Preserve-user-structure and propose-lightly input modes.
+- [x] Whole-deck, single-slide, and targeted replacement commands.
+- [x] Six high-frequency editable management layouts.
+- [x] Chinese six-slide acceptance fixture and CJK font declaration.
+- [x] Multi-slide stability and locked-page checks under a 10-minute ceiling.
+- [ ] Human-scored 80-point usability benchmark across ten synthetic Chinese decks.
+- [ ] Board update, project review, transformation, and role-fit starter packs.
 
 ## 0.4 — Expanded PowerPoint adapters
 
@@ -32,6 +35,7 @@
 - Native table, chart, and shape contracts.
 - Template ingestion and brand-token overrides.
 - Visual regression tests for reference outputs.
+- Deterministic renderers for `diagnosis-tree` and `comparison-matrix`.
 
 ## 1.0 — Proven executive-report system
 
