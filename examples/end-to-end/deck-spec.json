@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "deck_title": "Slide90 P0: an executable foundation for decision-ready slides",
+  "audience": "Open-source maintainers and potential contributors",
+  "decision": "Accept the P0 contract and extend future layouts through the same interface",
+  "language": "en-US",
+  "theme": "slide90",
+  "slides": [
+    {
+      "number": 1,
+      "section": "01 / P0 EVIDENCE",
+      "title": "Four executable capabilities move Slide90 from a prompt pattern to a testable product",
+      "subtitle": "The P0 case rests on a stable contract, a unified interface, editable output, and reproducible quality checks.",
+      "layout": "evidence-matrix",
+      "metrics": [
+        {"value": "1", "label": "formal schema", "accent": "blue"},
+        {"value": "2", "label": "editable layouts", "accent": "green"},
+        {"value": "4", "label": "Node tests", "accent": "orange"},
+        {"value": "1", "label": "public fixture", "accent": "purple"}
+      ],
+      "blocks": [
+        {
+          "id": "contract",
+          "title": "Stable deck-spec contract",
+          "body": "Separate agent judgment from deterministic production with one validated JSON interface.",
+          "evidence": "Draft 2020-12 schema defines slides, metrics, blocks, evidence, roles, and sources.",
+          "proof": ["1 schema", "Stable element IDs"],
+          "accent": "blue"
+        },
+        {
+          "id": "cli",
+          "title": "One validation and render CLI",
+          "body": "Give every agent platform the same commands and failure behavior.",
+          "evidence": "The slide90 binary validates first and rejects unsupported render layouts explicitly.",
+          "proof": ["validate", "render"],
+          "accent": "green"
+        },
+        {
+          "id": "editable-output",
+          "title": "Editable PowerPoint output",
+          "body": "Render repeatable geometry without flattening the page into an image.",
+          "evidence": "Evidence matrix and capability loop use native PowerPoint shapes, text, and connectors.",
+          "proof": ["2 layouts", "16:9 PPTX"],
+          "accent": "purple"
+        },
+        {
+          "id": "quality-loop",
+          "title": "Reproducible quality loop",
+          "body": "Catch structural errors before drawing and visual failures before release.",
+          "evidence": "Tests, office rendering, overflow checks, independent import, and benchmark all pass.",
+          "proof": ["4 Node tests", "0 overflow errors"],
+          "accent": "orange"
+        }
+      ],
+      "conclusion": "P0 establishes a public, testable contract that future layouts can extend without changing the agent workflow.",
+      "source_refs": ["Public repository fixture: examples/end-to-end/source.md"]
+    },
+    {
+      "number": 2,
+      "section": "02 / CONTRIBUTOR LOOP",
+      "title": "Six contributor roles connect real reporting needs to a tested public release",
+      "subtitle": "The loop keeps user context at the front, stable interfaces in the middle, and measurable quality at the end.",
+      "layout": "capability-loop",
+      "metrics": [
+        {"value": "2", "label": "contributor roles", "accent": "orange"},
+        {"value": "4", "label": "maintainer roles", "accent": "blue"},
+        {"value": "1", "label": "release feedback loop", "accent": "green"}
+      ],
+      "blocks": [
+        {
+          "id": "issue-reporter",
+          "title": "Issue reporter",
+          "role": "Need and context",
+          "group": "business",
+          "body": "Name the management question\nAttach a synthetic failure case",
+          "accent": "orange"
+        },
+        {
+          "id": "layout-contributor",
+          "title": "Layout contributor",
+          "role": "Pattern proposal",
+          "group": "business",
+          "body": "Map the reading order\nProvide a safe visual example",
+          "accent": "orange"
+        },
+        {
+          "id": "spec-maintainer",
+          "title": "Spec maintainer",
+          "role": "Stable contract",
+          "group": "internal",
+          "body": "Review schema changes\nProtect backward compatibility",
+          "accent": "green"
+        },
+        {
+          "id": "renderer-maintainer",
+          "title": "Renderer maintainer",
+          "role": "Editable output",
+          "group": "internal",
+          "body": "Implement native objects\nPreserve tested geometry",
+          "accent": "blue"
+        },
+        {
+          "id": "qa-maintainer",
+          "title": "QA maintainer",
+          "role": "Visual proof",
+          "group": "internal",
+          "body": "Run render and overflow tests\nReview the public preview",
+          "accent": "purple"
+        },
+        {
+          "id": "release-maintainer",
+          "title": "Release maintainer",
+          "role": "Safe publication",
+          "group": "internal",
+          "body": "Check privacy and licensing\nPublish package and results",
+          "accent": "orange"
+        }
+      ],
+      "conclusion": "Contributors supply validated needs; maintainers protect the contract, renderer, quality bar, and public release.",
+      "source_refs": ["Public repository fixture: examples/end-to-end/source.md"]
+    }
+  ]
+}

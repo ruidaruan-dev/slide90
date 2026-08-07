@@ -1,0 +1,150 @@
+{
+  "generator": "slide90-rule-baseline-v1",
+  "answer_key_access": false,
+  "cases": [
+    {
+      "id": "performance-fictional-retail",
+      "layout": "performance-dashboard",
+      "title": "Fictional case. A sample retailer reports quarterly revenue of $42 million, up 6",
+      "content": "Fictional case. A sample retailer reports quarterly revenue of $42 million, up 6%; gross margin is 28%, down 1 point; 12 stores opened; on-time delivery reached 95%. Growth continued, but margin recovery is the next priority."
+    },
+    {
+      "id": "performance-fictional-learning",
+      "layout": "performance-dashboard",
+      "title": "Fictional case. A learning portal logged 4,800 sessions, 620 monthly users, 68% ",
+      "content": "Fictional case. A learning portal logged 4,800 sessions, 620 monthly users, 68% course completion, an 89% satisfaction score, and 140 overdue assignments. Adoption is healthy, while completion discipline needs attention."
+    },
+    {
+      "id": "performance-fictional-support",
+      "layout": "performance-dashboard",
+      "title": "Fictional case. A support desk handled 7,200 tickets; first response improved fr",
+      "content": "Fictional case. A support desk handled 7,200 tickets; first response improved from 5 hours to 3 hours; first-contact resolution rose from 70% to 79%; satisfaction stayed at 92%; 110 tickets remain overdue."
+    },
+    {
+      "id": "evidence-fictional-program-lead",
+      "layout": "roadmap",
+      "title": "Fictional case. Assess a program lead against four requirements: planning is pro",
+      "content": "Fictional case. Assess a program lead against four requirements: planning is proven by six delivered initiatives; governance by an approved control handbook; collaboration by three cross-team launches; team development by mentoring two new leads."
+    },
+    {
+      "id": "evidence-fictional-vendor",
+      "layout": "evidence-matrix",
+      "title": "Fictional case. Recommend Vendor Z using direct evidence: four comparable deploy",
+      "content": "Fictional case. Recommend Vendor Z using direct evidence: four comparable deployments, support for standard sign-on and APIs, an independent security audit, weekday onsite coverage, and round-the-clock remote support."
+    },
+    {
+      "id": "evidence-fictional-readiness",
+      "layout": "evidence-matrix",
+      "title": "Fictional case. A data program is ready to start: five domain owners approved th",
+      "content": "Fictional case. A data program is ready to start: five domain owners approved the scope; customer and product records are included; nine interfaces are inventoried; three internal and two external contributors are assigned."
+    },
+    {
+      "id": "diagnosis-fictional-delivery",
+      "layout": "diagnosis-tree",
+      "title": "Fictional case. Average delivery time increased from 3 weeks to 6 weeks. Access ",
+      "content": "Fictional case. Average delivery time increased from 3 weeks to 6 weeks. Access approval consumes 9 days, teams rebuild the same connector, and five specialists carry 20 active requests. Leaders must simplify access, standardize integration, and cap work in progress."
+    },
+    {
+      "id": "diagnosis-fictional-forecast",
+      "layout": "roadmap",
+      "title": "Fictional case. Forecast accuracy fell from 84% to 71%. One quarter of promotion",
+      "content": "Fictional case. Forecast accuracy fell from 84% to 71%. One quarter of promotion plans arrived late, key accounts used offline sheets, and the model was not refreshed for two cycles. Fix data entry, unify the forecast channel, and restore scheduled refreshes."
+    },
+    {
+      "id": "diagnosis-fictional-inventory",
+      "layout": "diagnosis-tree",
+      "title": "Fictional case. Inventory days rose from 38 to 52. Slow-moving items caused half",
+      "content": "Fictional case. Inventory days rose from 38 to 52. Slow-moving items caused half the increase, order-batch settings were not reviewed for 18 months, and sales and supply teams aligned forecasts only monthly."
+    },
+    {
+      "id": "roadmap-fictional-adoption",
+      "layout": "roadmap",
+      "title": "Fictional case. A July-to-December adoption plan starts with 20 pilot users in J",
+      "content": "Fictional case. A July-to-December adoption plan starts with 20 pilot users in July, expands to 60 users from August to October, targets 65% weekly activity, validates four use cases in November, and makes a scale decision in December."
+    },
+    {
+      "id": "roadmap-fictional-data-hub",
+      "layout": "roadmap",
+      "title": "Fictional case. A six-month data-hub plan catalogs 25 core tables in Q3, launche",
+      "content": "Fictional case. A six-month data-hub plan catalogs 25 core tables in Q3, launches one access request in October, connects sales and logistics data in November, and uses a December security review as the gate for wider access."
+    },
+    {
+      "id": "roadmap-fictional-launch",
+      "layout": "roadmap",
+      "title": "Fictional case. A product plan completes user validation in August, freezes scop",
+      "content": "Fictional case. A product plan completes user validation in August, freezes scope in September, runs a small pilot in October, holds a quality review in November, and targets launch in December only if the review passes."
+    },
+    {
+      "id": "capability-fictional-service-loop",
+      "layout": "capability-loop",
+      "title": "Fictional case. Build a service-production loop with business champions, knowled",
+      "content": "Fictional case. Build a service-production loop with business champions, knowledge stewards, data curators, solution designers, delivery engineers, and service evaluators. Show handoffs from demand and knowledge to design, delivery, measurement, and feedback."
+    },
+    {
+      "id": "capability-fictional-demand-loop",
+      "layout": "portfolio-table",
+      "title": "Fictional case. A demand loop assigns request validation to key users, value ass",
+      "content": "Fictional case. A demand loop assigns request validation to key users, value assessment to business partners, solution design to product owners, delivery to engineering, adoption tracking to operations, and continue-adjust-stop decisions to a quarterly portfolio board."
+    },
+    {
+      "id": "capability-fictional-knowledge-loop",
+      "layout": "capability-loop",
+      "title": "Fictional case. A knowledge loop has experts approve content, stewards manage ve",
+      "content": "Fictional case. A knowledge loop has experts approve content, stewards manage versions, a platform team control access, an application team package use cases, operators return low-rated answers, and a quarterly review retires obsolete content."
+    },
+    {
+      "id": "portfolio-fictional-delivery",
+      "layout": "portfolio-table",
+      "title": "Fictional case. A Q3-Q4 portfolio includes pricing analysis due July 30, catalog",
+      "content": "Fictional case. A Q3-Q4 portfolio includes pricing analysis due July 30, catalog cleanup due early August, research exploration due late August, an order assistant running August to December, and a complaint map due September. Show timing, status, value, and decision."
+    },
+    {
+      "id": "portfolio-fictional-assets",
+      "layout": "portfolio-table",
+      "title": "Fictional case. A sample team owns two small compute nodes, one internal model s",
+      "content": "Fictional case. A sample team owns two small compute nodes, one internal model service, one external model gateway, one test workstation, a model registry, and two generic workflow tools named FlowOne and FlowTwo. Present asset type, purpose, and status."
+    },
+    {
+      "id": "portfolio-fictional-transformation",
+      "layout": "portfolio-table",
+      "title": "Fictional case. Review six sample programs: customer portal, demand planning, da",
+      "content": "Fictional case. Review six sample programs: customer portal, demand planning, data quality, service assistant, equipment maintenance, and invoice automation. Each row needs owner, stage, budget band, expected value, and one pending decision."
+    },
+    {
+      "id": "comparison-fictional-hosting",
+      "layout": "comparison-matrix",
+      "title": "Fictional case. Compare local hosting, external hosting, and a hybrid. Local giv",
+      "content": "Fictional case. Compare local hosting, external hosting, and a hybrid. Local gives the most control but scales slowly; external launches fastest but restricts sensitive data; hybrid balances control and elasticity but adds integration work. Recommend hybrid for tiered workloads."
+    },
+    {
+      "id": "comparison-fictional-workflow",
+      "layout": "comparison-matrix",
+      "title": "Fictional case. Compare three imaginary workflow tools. FlowOne is strong for se",
+      "content": "Fictional case. Compare three imaginary workflow tools. FlowOne is strong for search and includes support; FlowTwo is flexible and open source but needs internal operations; FlowThree has complete enterprise controls but costs more. Recommend a use-case-based combination."
+    },
+    {
+      "id": "comparison-fictional-capacity",
+      "layout": "comparison-matrix",
+      "title": "Fictional case. Compare delivery capacity models. All-internal retains knowledge",
+      "content": "Fictional case. Compare delivery capacity models. All-internal retains knowledge but scales slowly; all-external scales quickly but risks losing core capability; an internal core with external flex preserves architecture ownership and handles peaks. Recommend the third model."
+    },
+    {
+      "id": "decision-fictional-expansion",
+      "layout": "decision-page",
+      "title": "Fictional case. Request approval to expand a tool pilot from 20 to 75 users. In ",
+      "content": "Fictional case. Request approval to expand a tool pilot from 20 to 75 users. In the first group, 85% completed one assisted output, weekly activity reached 72%, and five reusable playbooks were created. Approve account capacity and participating teams."
+    },
+    {
+      "id": "decision-fictional-access",
+      "layout": "decision-page",
+      "title": "Fictional case. Request approval for a controlled data pilot using least privile",
+      "content": "Fictional case. Request approval for a controlled data pilot using least privilege, masked sensitive fields, 120-day audit logs, and owner-approved access. Decide whether two sample business units may begin the pilot."
+    },
+    {
+      "id": "decision-fictional-stop",
+      "layout": "decision-page",
+      "title": "Fictional case. Request closure of a sample reporting project. Two pilots produc",
+      "content": "Fictional case. Request closure of a sample reporting project. Two pilots produced only four weekly users, annual maintenance is $30,000, and capability overlap with an existing tool exceeds 75%. Move two implementers to customer analytics and approve closure."
+    }
+  ]
+}

@@ -4,11 +4,48 @@
 
 Slide90 is an open-source Agent Skill that turns raw business material into compact, decision-ready executive slides. It plans the full deck once, renders in batch, validates structure before drawing, locks passing slides, and repairs only failed elements.
 
+**P0 is now executable:** a formal deck-spec schema, one CLI, and a first-party renderer produce editable PowerPoint for the two flagship layouts: `evidence-matrix` and `capability-loop`.
+
 In our controlled five-slide runtime benchmark, the Fast Loop reduced wall time by **79.4%** while producing pixel-identical output. The name is the ambition; the benchmark is the evidence.
 
 [中文说明](README.zh-CN.md) · [Benchmark](BENCHMARK.md) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
 ![Slide90 Fast Loop demo](assets/slide90-demo.gif)
+
+## P0: spec to editable PowerPoint
+
+```mermaid
+flowchart LR
+    A[Raw business source] --> B[Validated deck spec]
+    B --> C[Batch renderer]
+    C --> D[Editable PPTX]
+    D --> E[Render and overflow QA]
+```
+
+![P0 editable PowerPoint preview](examples/end-to-end/output/preview.png)
+
+Run the public fixture:
+
+```bash
+npm ci
+node bin/slide90.mjs validate examples/end-to-end/deck-spec.json
+node bin/slide90.mjs render examples/end-to-end/deck-spec.json \
+  --output examples/end-to-end/output/slide90-p0-demo.pptx
+```
+
+Run the P0 delivery gate before handing off a deck:
+
+```bash
+npm run verify:p0
+```
+
+The gate runs automated tests, validates the 24-case management-reporting eval suite and deck spec, generates the editable deck three times, compares slide-level semantic fingerprints, verifies native shapes/text and source notes, runs the five-slide benchmark, and fails if the complete check exceeds 600 seconds. The latest checked-in result is [`benchmarks/results/p0-verification-latest.json`](benchmarks/results/p0-verification-latest.json).
+
+The core suite at [`evals/cases.json`](evals/cases.json) contains three synthetic prompts for each of the eight management layouts. Every case defines its expected layout, title intent, required facts, and facts that must not be invented.
+
+Run `npm run eval:baseline` to answer all 24 prompts with a rule-based planner that cannot read the answer-key fields, then score layout routing, factual retention, and forbidden-claim hits. This is a harness smoke test, not a claim about final AI design quality.
+
+The contract is published at [`schema/deck-spec.schema.json`](schema/deck-spec.schema.json). The fixture preserves the full path from [synthetic source notes](examples/end-to-end/source.md) to [deck specification](examples/end-to-end/deck-spec.json), [editable PPTX](examples/end-to-end/output/slide90-p0-demo.pptx), and PNG preview.
 
 ## What it produces
 
@@ -93,10 +130,14 @@ evidence matrix. Do not invent evidence. Return an editable 16:9 slide.
 ```text
 slide90/
 ├── SKILL.md                    # Agent workflow and hard rules
+├── bin/slide90.mjs             # validate/render CLI
+├── schema/deck-spec.schema.json # stable planner-renderer contract
+├── src/render/                 # editable PPTX renderer
 ├── assets/layout-specs.json    # Stable layout coordinates
 ├── assets/design-tokens.json   # Visual system
 ├── references/fast-loop.md     # Batch and targeted-repair protocol
 ├── examples/                   # Synthetic visual examples
+├── benchmarks/                 # Reproducible five-slide runner
 ├── evals/                      # Layout-routing quality cases
 ├── scripts/                    # Installer, validators, packager
 └── .github/workflows/          # Automated validation and releases
@@ -105,6 +146,12 @@ slide90/
 ## Validate and package
 
 ```bash
+node bin/slide90.mjs validate examples/end-to-end/deck-spec.json
+npm test
+npm run eval:validate
+npm run eval:baseline
+npm run verify:p0
+npm run benchmark
 python scripts/validate_repo.py
 python -m unittest discover -s tests
 python scripts/package_skill.py

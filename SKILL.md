@@ -11,6 +11,8 @@ Create sober, high-density executive slides that remain readable on a meeting-ro
 
 Use **Fast Loop** by default for decks of 2–12 slides. Plan the complete deck once, render it as one batch, lock every slide that passes QA, and repair only failed slides or elements. Never restart the whole deck because one slide fails.
 
+For an installed local runtime, keep the complete planning-to-delivery loop within 10 minutes. Use the phase budgets in [references/fast-loop.md](references/fast-loop.md); exclude only first-time dependency installation, model queueing, network transfer, and source approval delays.
+
 Use the single-slide workflow only when the user requests one page. Read [references/fast-loop.md](references/fast-loop.md) for the batch specification, validation commands, and repair protocol.
 
 ## Fast Loop workflow
@@ -22,8 +24,10 @@ Use the single-slide workflow only when the user requests one page. Read [refere
    - For “业务角色—内部团队—交付闭环—反馈迭代”, read [references/capability-loop.md](references/capability-loop.md).
    - For a hybrid page, use one layout as the main structure and borrow at most one secondary device from another layout.
 4. Rewrite vague language using [references/content-compression.md](references/content-compression.md). Validate the complete specification before rendering when scripts can run:
-   `python scripts/validate_deck_spec.py deck-spec.json`
+   `node bin/slide90.mjs validate deck-spec.json`
 5. Render all slides in one batch. Apply [assets/design-tokens.json](assets/design-tokens.json) and the exact coordinate zones in [assets/layout-specs.json](assets/layout-specs.json). Produce editable shapes and text; do not flatten the full slide into one image.
+   For `evidence-matrix` and `capability-loop`, the P0 renderer can create an editable PowerPoint directly:
+   `node bin/slide90.mjs render deck-spec.json --output deck.pptx`
 6. Render the complete deck once and inspect it at normal presentation size. Record failures by slide number and element ID.
 7. Lock passing slides. Repair only the failed text, element, or slide, then rerender only affected slides when the platform permits it. Stop after two repair passes unless the user explicitly requests exhaustive refinement.
 

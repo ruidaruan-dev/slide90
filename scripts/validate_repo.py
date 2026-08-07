@@ -33,8 +33,25 @@ REQUIRED = (
     "examples/evidence-matrix.svg",
     "examples/operating-model.svg",
     "evals/cases.json",
+    "evals/cases.schema.json",
+    "evals/validate.mjs",
+    "evals/score.mjs",
+    "evals/run-baseline.mjs",
+    "package.json",
+    "schema/deck-spec.schema.json",
+    "bin/slide90.mjs",
+    "src/validate.mjs",
+    "src/render/index.mjs",
+    "src/render/layouts/evidence-matrix.mjs",
+    "src/render/layouts/capability-loop.mjs",
+    "examples/end-to-end/source.md",
+    "examples/end-to-end/deck-spec.json",
+    "benchmarks/cases/five-slide.json",
+    "benchmarks/run.mjs",
+    "scripts/verify_p0.mjs",
+    "benchmarks/results/p0-verification-latest.json",
 )
-SCAN_DIRS = ("references", "examples", "evals", "assets")
+SCAN_DIRS = ("references", "examples", "evals", "assets", "schema", "bin", "src", "benchmarks", "tests-node")
 PUBLIC_TEXT_FILES = ("README.md", "README.zh-CN.md", "SKILL.md", "CONTRIBUTING.md", "ROADMAP.md", "BENCHMARK.md")
 BANNED_MARKERS = (
     "KINGFA",
@@ -71,7 +88,11 @@ def validate_skill(errors: list[str]) -> None:
 
 
 def markdown_files() -> list[Path]:
-    return sorted(ROOT.rglob("*.md"))
+    return sorted(path for path in ROOT.rglob("*.md") if not ignored(path))
+
+
+def ignored(path: Path) -> bool:
+    return any(part in {".git", "node_modules", "dist", "scratch"} for part in path.relative_to(ROOT).parts)
 
 
 def validate_links(errors: list[str]) -> None:
@@ -100,7 +121,7 @@ def scan_paths() -> list[Path]:
 
 def validate_public_hygiene(errors: list[str]) -> None:
     for path in scan_paths():
-        if path.suffix.lower() not in {".md", ".json", ".yaml", ".yml", ".svg", ".txt"}:
+        if path.suffix.lower() not in {".md", ".json", ".yaml", ".yml", ".svg", ".txt", ".mjs"}:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for marker in BANNED_MARKERS:
@@ -110,6 +131,8 @@ def validate_public_hygiene(errors: list[str]) -> None:
 
 def validate_json(errors: list[str]) -> None:
     for path in ROOT.rglob("*.json"):
+        if ignored(path):
+            continue
         try:
             json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
@@ -130,12 +153,30 @@ def validate_svgs(errors: list[str]) -> None:
 
 
 def validate_evals(errors: list[str]) -> None:
-    cases = json.loads((ROOT / "evals/cases.json").read_text(encoding="utf-8"))
-    if len(cases) < 8:
-        fail(errors, "evals/cases.json must cover all eight layout routes")
+    suite = json.loads((ROOT / "evals/cases.json").read_text(encoding="utf-8"))
+    cases = suite.get("cases", [])
+    if len(cases) != 24:
+        fail(errors, "evals/cases.json must contain exactly 24 core cases")
     ids = [case.get("id") for case in cases]
     if len(ids) != len(set(ids)):
         fail(errors, "evaluation case ids must be unique")
+    distribution: dict[str, int] = {}
+    for case in cases:
+        layout = case.get("expected_layout")
+        distribution[layout] = distribution.get(layout, 0) + 1
+    if len(distribution) != 8 or any(count != 3 for count in distribution.values()):
+        fail(errors, "evaluation suite must contain three cases for each of eight layout routes")
+
+
+def validate_p0_contract(errors: list[str]) -> None:
+    package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
+    if package.get("bin", {}).get("slide90") != "bin/slide90.mjs":
+        fail(errors, "package.json must expose the slide90 CLI")
+    schema = json.loads((ROOT / "schema/deck-spec.schema.json").read_text(encoding="utf-8"))
+    layouts = schema["$defs"]["slide"]["properties"]["layout"]["enum"]
+    for layout in ("evidence-matrix", "capability-loop"):
+        if layout not in layouts:
+            fail(errors, f"deck schema is missing P0 layout: {layout}")
 
 
 def main() -> int:
@@ -148,6 +189,7 @@ def main() -> int:
         validate_json(errors)
         validate_svgs(errors)
         validate_evals(errors)
+        validate_p0_contract(errors)
     if errors:
         print("Validation failed:")
         for error in errors:

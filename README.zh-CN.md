@@ -4,6 +4,8 @@
 
 Slide90 是一个面向企业管理汇报的开源 Agent Skill。它把工作总结、经营数据、项目进展、问题诊断和组织规划，转化为紧凑、证据驱动、可直接用于管理决策的演示文稿。
 
+**P0 已经可执行：**正式 deck-spec schema、统一 CLI 和首个自带渲染器已经能够把 `evidence-matrix`（证据矩阵）与 `capability-loop`（能力闭环）生成为可编辑 PowerPoint。
+
 核心不是“再做一套模板”，而是改变生成循环：**一次规划整套PPT、生成前校验结构、整套批量渲染、锁定通过页面、只返修失败元素**。
 
 在5页受控运行时测试中，Fast Loop 将总耗时降低 **79.4%**，且前后输出像素完全一致。Slide90 是项目目标，79.4% 是当前已有证据。
@@ -11,6 +13,41 @@ Slide90 是一个面向企业管理汇报的开源 Agent Skill。它把工作总
 [English](README.md) · [测试说明](BENCHMARK.md) · [路线图](ROADMAP.md) · [参与贡献](CONTRIBUTING.md)
 
 ![Slide90 Fast Loop 演示](assets/slide90-demo.gif)
+
+## P0：从结构化规范到可编辑 PowerPoint
+
+```mermaid
+flowchart LR
+    A[原始业务材料] --> B[通过校验的 deck spec]
+    B --> C[整套批量渲染]
+    C --> D[可编辑 PPTX]
+    D --> E[渲染与溢出检查]
+```
+
+![P0 可编辑 PowerPoint 预览](examples/end-to-end/output/preview.png)
+
+直接运行公开样例：
+
+```bash
+npm ci
+node bin/slide90.mjs validate examples/end-to-end/deck-spec.json
+node bin/slide90.mjs render examples/end-to-end/deck-spec.json \
+  --output examples/end-to-end/output/slide90-p0-demo.pptx
+```
+
+交付前执行 P0 验收门：
+
+```bash
+npm run verify:p0
+```
+
+它会自动运行测试、检查24题核心管理汇报测试集、校验 deck spec、连续生成三次可编辑 PPTX、比较页面语义指纹、检查原生形状/文本与来源备注、运行五页基准，并在完整检查超过 600 秒时直接失败。最新验收结果保存在 [`benchmarks/results/p0-verification-latest.json`](benchmarks/results/p0-verification-latest.json)。
+
+核心测试集位于 [`evals/cases.json`](evals/cases.json)：八类管理页面各3题，每题包含预期版式、标题结论、必须保留的事实和禁止臆造项。它当前验证“考题和答案标准是否完整”；后续规划器提交候选 deck spec 后，再按同一答案标准评分。
+
+运行 `npm run eval:baseline` 可以用不读取答案字段的规则基线完成24题，并输出结构正确率、事实保留率和禁止项命中数。该基线只验证评测闭环，不代表最终AI设计质量。
+
+正式数据契约位于 [`schema/deck-spec.schema.json`](schema/deck-spec.schema.json)。公开样例完整保留了[虚构原始材料](examples/end-to-end/source.md) → [deck spec](examples/end-to-end/deck-spec.json) → [可编辑 PPTX](examples/end-to-end/output/slide90-p0-demo.pptx) → PNG 预览的链路。
 
 ## 为什么值得用
 
@@ -73,6 +110,21 @@ python scripts/install.py --target workbuddy --dry-run
 | 哪些项目优先投入？ | 项目组合表 |
 | 应该选择哪个方案？ | 方案对比 |
 | 需要领导决定什么？ | 决策页 |
+
+P0 自带渲染器先支持证据矩阵和能力闭环，其余六种版式继续由 Agent Skill 的结构规范与平台适配器支持，后续逐步纳入确定性渲染器。
+
+## 验证与性能测试
+
+```bash
+npm test
+npm run eval:validate
+npm run eval:baseline
+npm run verify:p0
+npm run benchmark
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/package_skill.py
+```
 
 ## 隐私与脱敏
 

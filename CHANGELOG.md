@@ -4,6 +4,18 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+## [0.2.0-alpha.1] - 2026-08-06
+
+### Added
+
+- Formal JSON Schema for the deck specification contract.
+- Unified `slide90 validate` and `slide90 render` CLI.
+- First-party editable PPTX renderers for `evidence-matrix` and `capability-loop`.
+- Public source-to-spec-to-PPTX-to-PNG fixture.
+- Node schema and render tests, office-render overflow QA, and artifact-tool import QA.
+- Reproducible five-slide renderer benchmark with raw JSON results.
+- Ten-minute P0 delivery gate with three-run semantic stability verification.
+
 ## [0.1.0] - 2026-08-06
 
 ### Added

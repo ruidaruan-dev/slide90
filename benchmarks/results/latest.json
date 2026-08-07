@@ -1,0 +1,27 @@
+{
+  "benchmark": "slide90-p0-renderer",
+  "generated_at": "2026-08-06T10:07:33.503Z",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "scope": "Local schema validation plus PPTX generation; excludes model, network, and office-app startup latency.",
+  "case": "benchmarks/cases/five-slide.json",
+  "slides": 5,
+  "runs": 3,
+  "sequential_ms": [
+    28.174,
+    18.928,
+    15.189
+  ],
+  "batch_ms": [
+    7.959,
+    8.573,
+    4.844
+  ],
+  "median_sequential_ms": 18.928,
+  "median_batch_ms": 7.959,
+  "speedup": 2.38,
+  "reduction_percent": 58
+}

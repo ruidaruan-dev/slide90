@@ -2,6 +2,21 @@
 
 Use this protocol for decks of 2–12 slides. Separate judgment from execution: let the agent decide the storyline and layout IDs once; let deterministic coordinates and validation handle repeated production work.
 
+## Ten-minute delivery budget
+
+For an installed local runtime, treat 10 minutes as a hard end-to-end delivery ceiling for a 2–12 slide Fast Loop run. This excludes first-time dependency installation, model queueing, network transfer, and source approval delays.
+
+| Phase | Maximum |
+|---|---:|
+| Extract facts and plan the complete deck | 180 s |
+| Validate the deck specification | 30 s |
+| Batch-render the editable deck | 120 s |
+| Render and inspect every slide | 180 s |
+| One targeted repair pass and packaging | 90 s |
+| **Total ceiling** | **600 s** |
+
+Start one timer before deck planning. If a phase exceeds its budget, stop repeating work: preserve the validated specification, lock passing slides, and report the exact failed phase. Never hide an SLA miss by excluding a repair pass.
+
 ## Batch specification
 
 Create one JSON object before drawing shapes:
@@ -57,7 +72,7 @@ Read `assets/layout-specs.json` for exact content zones. Treat the coordinates a
 Run before PowerPoint rendering:
 
 ```bash
-python scripts/validate_deck_spec.py deck-spec.json
+node bin/slide90.mjs validate deck-spec.json
 ```
 
 Fix only the reported field. Typical failures include an invalid layout ID, generic or overlong title, excessive blocks, excessive card text, absent evidence, or missing conclusion.

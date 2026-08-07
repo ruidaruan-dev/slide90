@@ -7,6 +7,8 @@
 - [x] Installer works in dry-run mode for every target.
 - [x] ZIP package contains only skill runtime files.
 - [x] Evaluation cases and tests pass.
+- [x] P0 Node tests and public PPTX fixture render pass.
+- [x] `npm run verify:p0` passes the three-run stability and 600-second delivery gate.
 
 ## Privacy and licensing
 
@@ -21,7 +23,7 @@
 - [ ] Add repository description and topics.
 - [ ] Enable Issues, Discussions, and security advisories.
 - [ ] Pin a `showcase` discussion and a `layout request` issue.
-- [ ] Publish `v0.1.0` with the generated `.skill.zip` file.
+- [ ] Publish `v0.2.0-alpha.1` with the generated `.skill.zip` file.
 
 ## Launch assets
 

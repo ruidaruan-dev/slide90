@@ -1,0 +1,236 @@
+{
+  "status": "fail",
+  "summary": {
+    "cases": 24,
+    "submitted": 24,
+    "passed": 21,
+    "layout_accuracy_percent": 87.5,
+    "fact_retention_percent": 100,
+    "forbidden_claim_hits": 0,
+    "forbidden_claim_checks": 72
+  },
+  "results": [
+    {
+      "id": "performance-fictional-retail",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "performance-fictional-learning",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "performance-fictional-support",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "evidence-fictional-program-lead",
+      "status": "fail",
+      "layout_correct": false,
+      "retained_facts": 4,
+      "total_facts": 4,
+      "forbidden_claims": [],
+      "errors": [
+        "layout: expected evidence-matrix, got roadmap"
+      ]
+    },
+    {
+      "id": "evidence-fictional-vendor",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "evidence-fictional-readiness",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "diagnosis-fictional-delivery",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "diagnosis-fictional-forecast",
+      "status": "fail",
+      "layout_correct": false,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": [
+        "layout: expected diagnosis-tree, got roadmap"
+      ]
+    },
+    {
+      "id": "diagnosis-fictional-inventory",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 4,
+      "total_facts": 4,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "roadmap-fictional-adoption",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "roadmap-fictional-data-hub",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "roadmap-fictional-launch",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "capability-fictional-service-loop",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "capability-fictional-demand-loop",
+      "status": "fail",
+      "layout_correct": false,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": [
+        "layout: expected capability-loop, got portfolio-table"
+      ]
+    },
+    {
+      "id": "capability-fictional-knowledge-loop",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "portfolio-fictional-delivery",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "portfolio-fictional-assets",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "portfolio-fictional-transformation",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "comparison-fictional-hosting",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "comparison-fictional-workflow",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "comparison-fictional-capacity",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "decision-fictional-expansion",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 6,
+      "total_facts": 6,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "decision-fictional-access",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    },
+    {
+      "id": "decision-fictional-stop",
+      "status": "pass",
+      "layout_correct": true,
+      "retained_facts": 5,
+      "total_facts": 5,
+      "forbidden_claims": [],
+      "errors": []
+    }
+  ]
+}

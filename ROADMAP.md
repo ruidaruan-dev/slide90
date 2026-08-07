@@ -10,11 +10,14 @@
 
 ## 0.2 — Reproducible slide specifications
 
-- Formal JSON schema for slide briefs and blocks.
-- Deterministic SVG renderer for the two canonical layouts.
-- English and Chinese example gallery.
-- Automated typography and overflow checks.
-- Reproducible benchmark harness and public fixtures.
+- [x] Formal JSON schema for slide briefs and blocks.
+- [x] Unified `slide90 validate` and `slide90 render` CLI.
+- [x] Editable PPTX renderer for the two canonical layouts.
+- [x] Public end-to-end fixture from raw source to PPTX and PNG preview.
+- [x] Automated schema, rendering, and overflow checks.
+- [x] Reproducible five-slide benchmark harness with raw results.
+- [x] Ten-minute delivery SLA gate with repeated-render stability checks.
+- [ ] Chinese deck-spec and rendered example gallery.
 
 ## 0.3 — Deck-level storylining
 
@@ -23,9 +26,9 @@
 - Multi-slide narrative consistency checks.
 - Board update, project review, transformation, and role-fit starter packs.
 
-## 0.4 — Editable PowerPoint adapters
+## 0.4 — Expanded PowerPoint adapters
 
-- Adapter interface for PPTX-capable runtimes.
+- Adapter interface for additional PPTX-capable runtimes.
 - Native table, chart, and shape contracts.
 - Template ingestion and brand-token overrides.
 - Visual regression tests for reference outputs.

@@ -10,7 +10,18 @@ from pathlib import Path
 
 SKILL_NAME = "build-executive-report-slides"
 SOURCE_ROOT = Path(__file__).resolve().parents[1]
-RUNTIME_ITEMS = ("SKILL.md", "agents", "assets", "references", "examples")
+RUNTIME_ITEMS = (
+    "SKILL.md",
+    "agents",
+    "assets",
+    "references",
+    "examples",
+    "bin",
+    "src",
+    "schema",
+    "package.json",
+    "package-lock.json",
+)
 TARGETS = {
     "codex": Path.home() / ".agents" / "skills" / SKILL_NAME,
     "claude": Path.home() / ".claude" / "skills" / SKILL_NAME,

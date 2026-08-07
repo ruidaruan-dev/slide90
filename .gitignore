@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+node_modules/
 .DS_Store
 .idea/
 .vscode/
@@ -7,3 +8,5 @@ dist/
 scratch/
 *.pptx
 *.pdf
+!examples/end-to-end/output/slide90-p0-demo.pptx
+examples/end-to-end/output/slide90-p0-demo/

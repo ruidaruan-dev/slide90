@@ -26,6 +26,10 @@ Use synthetic data and neutral brands.
 ## Development
 
 ```bash
+npm ci
+npm test
+npm run render:example
+npm run benchmark
 python scripts/validate_repo.py
 python -m unittest discover -s tests
 python scripts/package_skill.py
